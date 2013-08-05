@@ -1,0 +1,2218 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<struct type='{HuffmanTree=&quot;root_&quot;^{_HuffmanTreeNode=&quot;symbol_&quot;i&quot;children_&quot;i}&quot;max_nodes_&quot;i&quot;num_nodes_&quot;i}' name='HTreeGroup'>
+<field declared_type='HuffmanTree*' type='[5{HuffmanTree=&quot;root_&quot;^{_HuffmanTreeNode=&quot;symbol_&quot;i&quot;children_&quot;i}&quot;max_nodes_&quot;i&quot;num_nodes_&quot;i}' name='htrees_'/>
+</struct>
+<struct type='{HuffmanTree=&quot;root_&quot;^{_HuffmanTreeNode=&quot;symbol_&quot;i&quot;children_&quot;i}&quot;max_nodes_&quot;i&quot;num_nodes_&quot;i}' name='HuffmanTree'>
+<field declared_type='HuffmanTreeNode*' type='^{_HuffmanTreeNode=&quot;symbol_&quot;i&quot;children_&quot;i}' name='root_'/>
+<field declared_type='int' type='i' name='max_nodes_'/>
+<field declared_type='int' type='i' name='num_nodes_'/>
+</struct>
+<struct type='{_HuffmanTreeNode=&quot;symbol_&quot;i&quot;children_&quot;i}' name='HuffmanTreeNode'>
+<field declared_type='int' type='i' name='symbol_'/>
+<field declared_type='int' type='i' name='children_'/>
+</struct>
+<struct type='{VP8BitReader=&quot;buf_&quot;*&quot;buf_end_&quot;*&quot;eof_&quot;i&quot;range_&quot;I&quot;value_&quot;I&quot;bits_&quot;i}' name='VP8BitReader'>
+<field declared_type='uint8_t*' type='*' name='buf_' const='true'/>
+<field declared_type='uint8_t*' type='*' name='buf_end_' const='true'/>
+<field declared_type='int' type='i' name='eof_'/>
+<field declared_type='range_t' type='I' name='range_'/>
+<field declared_type='bit_t' type='I' name='value_'/>
+<field declared_type='int' type='i' name='bits_'/>
+</struct>
+<struct type='{_VP8FInfo=&quot;f_level_&quot;b6&quot;f_ilevel_&quot;b6&quot;f_inner_&quot;b1}' name='VP8Decoder'>
+<field declared_type='VP8StatusCode' type='i' name='status_'/>
+<field declared_type='int' type='i' name='ready_'/>
+<field declared_type='char*' type='*' name='error_msg_' const='true'/>
+<field declared_type='VP8BitReader' type='{VP8BitReader=&quot;buf_&quot;*&quot;buf_end_&quot;*&quot;eof_&quot;i&quot;range_&quot;I&quot;value_&quot;I&quot;bits_&quot;i}' name='br_'/>
+<field declared_type='VP8FrameHeader' type='{_VP8FrameHeader=&quot;key_frame_&quot;C&quot;profile_&quot;C&quot;show_&quot;C&quot;partition_length_&quot;I}' name='frm_hdr_'/>
+<field declared_type='VP8PictureHeader' type='{_VP8PictureHeader=&quot;width_&quot;S&quot;height_&quot;S&quot;xscale_&quot;C&quot;yscale_&quot;C&quot;colorspace_&quot;C&quot;clamp_type_&quot;C}' name='pic_hdr_'/>
+<field declared_type='VP8FilterHeader' type='{_VP8FilterHeader=&quot;simple_&quot;i&quot;level_&quot;i&quot;sharpness_&quot;i&quot;use_lf_delta_&quot;i&quot;ref_lf_delta_&quot;[4i]&quot;mode_lf_delta_&quot;[4i]}' name='filter_hdr_'/>
+<field declared_type='VP8SegmentHeader' type='{_VP8SegmentHeader=&quot;use_segment_&quot;i&quot;update_map_&quot;i&quot;absolute_delta_&quot;i&quot;quantizer_&quot;[4c]&quot;filter_strength_&quot;[4c]}' name='segment_hdr_'/>
+<field declared_type='WebPWorker' type='{_WebPWorker=&quot;status_&quot;i&quot;hook&quot;^?&quot;data1&quot;^v&quot;data2&quot;^v&quot;had_error&quot;i}' name='worker_'/>
+<field declared_type='int' type='i' name='use_threads_'/>
+<field declared_type='int' type='i' name='cache_id_'/>
+<field declared_type='int' type='i' name='num_caches_'/>
+<field declared_type='VP8ThreadContext' type='{_VP8ThreadContext=&quot;id_&quot;i&quot;mb_y_&quot;i&quot;filter_row_&quot;i&quot;f_info_&quot;^{_VP8FInfo=&quot;f_level_&quot;b6&quot;f_ilevel_&quot;b6&quot;f_inner_&quot;b1}&quot;io_&quot;{VP8Io=&quot;width&quot;i&quot;height&quot;i&quot;mb_y&quot;i&quot;mb_w&quot;i&quot;mb_h&quot;i&quot;y&quot;*&quot;u&quot;*&quot;v&quot;*&quot;y_stride&quot;i&quot;uv_stride&quot;i&quot;opaque&quot;^v&quot;put&quot;^?&quot;setup&quot;^?&quot;teardown&quot;^?&quot;fancy_upsampling&quot;i&quot;data_size&quot;I&quot;data&quot;*&quot;bypass_filtering&quot;i&quot;use_cropping&quot;i&quot;crop_left&quot;i&quot;crop_right&quot;i&quot;crop_top&quot;i&quot;crop_bottom&quot;i&quot;use_scaling&quot;i&quot;scaled_width&quot;i&quot;scaled_height&quot;i&quot;a&quot;*}}' name='thread_ctx_'/>
+<field declared_type='int' type='i' name='mb_w_'/>
+<field declared_type='int' type='i' name='mb_h_'/>
+<field declared_type='int' type='i' name='tl_mb_x_'/>
+<field declared_type='int' type='i' name='tl_mb_y_'/>
+<field declared_type='int' type='i' name='br_mb_x_'/>
+<field declared_type='int' type='i' name='br_mb_y_'/>
+<field declared_type='int' type='i' name='num_parts_'/>
+<field declared_type='VP8BitReader*' type='[8{VP8BitReader=&quot;buf_&quot;*&quot;buf_end_&quot;*&quot;eof_&quot;i&quot;range_&quot;I&quot;value_&quot;I&quot;bits_&quot;i}' name='parts_'/>
+<field declared_type='uint32_t' type='I' name='buffer_flags_'/>
+<field declared_type='VP8QuantMatrix*' type='[4{_VP8QuantMatrix=&quot;y1_mat_&quot;[2i]&quot;y2_mat_&quot;[2i]&quot;uv_mat_&quot;[2i]}' name='dqm_'/>
+<field declared_type='VP8Proba' type='{_VP8Proba=&quot;segments_&quot;[3C]&quot;coeffs_&quot;[4[8[3[11C]]]]}' name='proba_'/>
+<field declared_type='int' type='i' name='use_skip_proba_'/>
+<field declared_type='uint8_t' type='C' name='skip_p_'/>
+<field declared_type='uint8_t*' type='*' name='intra_t_'/>
+<field declared_type='uint8_t*' type='[4C]' name='intra_l_'/>
+<field declared_type='uint8_t*' type='*' name='y_t_'/>
+<field declared_type='uint8_t*' type='*' name='u_t_'/>
+<field declared_type='uint8_t*' type='*' name='v_t_'/>
+<field declared_type='VP8MB*' type='^{_VP8MB=&quot;nz_&quot;b24&quot;dc_nz_&quot;b1&quot;skip_&quot;b1}' name='mb_info_'/>
+<field declared_type='VP8FInfo*' type='^{_VP8FInfo=&quot;f_level_&quot;b6&quot;f_ilevel_&quot;b6&quot;f_inner_&quot;b1}' name='f_info_'/>
+<field declared_type='uint8_t*' type='*' name='yuv_b_'/>
+<field declared_type='int16_t*' type='^s' name='coeffs_'/>
+<field declared_type='uint8_t*' type='*' name='cache_y_'/>
+<field declared_type='uint8_t*' type='*' name='cache_u_'/>
+<field declared_type='uint8_t*' type='*' name='cache_v_'/>
+<field declared_type='int' type='i' name='cache_y_stride_'/>
+<field declared_type='int' type='i' name='cache_uv_stride_'/>
+<field declared_type='void*' type='^v' name='mem_'/>
+<field declared_type='size_t' type='L' name='mem_size_'/>
+<field declared_type='int' type='i' name='mb_x_'/>
+<field declared_type='int' type='i' name='mb_y_'/>
+<field declared_type='uint8_t' type='C' name='is_i4x4_'/>
+<field declared_type='uint8_t*' type='[16C]' name='imodes_'/>
+<field declared_type='uint8_t' type='C' name='uvmode_'/>
+<field declared_type='uint8_t' type='C' name='segment_'/>
+<field declared_type='uint32_t' type='I' name='non_zero_'/>
+<field declared_type='uint32_t' type='I' name='non_zero_ac_'/>
+<field declared_type='int' type='i' name='filter_type_'/>
+<field declared_type='int' type='i' name='filter_row_'/>
+<field declared_type='VP8FInfo**' type='[4[2{?=&quot;f_level_&quot;b6&quot;f_ilevel_&quot;b6&quot;f_inner_&quot;b1}]]' name='fstrengths_'/>
+<field declared_type='uint8_t*' type='*' name='alpha_data_' const='true'/>
+<field declared_type='size_t' type='L' name='alpha_data_size_'/>
+<field declared_type='uint8_t*' type='*' name='alpha_plane_'/>
+<field declared_type='int' type='i' name='layer_colorspace_'/>
+<field declared_type='uint8_t*' type='*' name='layer_data_' const='true'/>
+<field declared_type='size_t' type='L' name='layer_data_size_'/>
+</struct>
+<struct type='{_VP8FInfo=&quot;f_level_&quot;b6&quot;f_ilevel_&quot;b6&quot;f_inner_&quot;b1}' name='VP8FInfo'>
+<field declared_type='unsigned int' type='b6' name='f_level_'/>
+<field declared_type='unsigned int' type='b6' name='f_ilevel_'/>
+<field declared_type='unsigned int' type='b1' name='f_inner_'/>
+</struct>
+<struct type='{_VP8FilterHeader=&quot;simple_&quot;i&quot;level_&quot;i&quot;sharpness_&quot;i&quot;use_lf_delta_&quot;i&quot;ref_lf_delta_&quot;[4i]&quot;mode_lf_delta_&quot;[4i]}' name='VP8FilterHeader'>
+<field declared_type='int' type='i' name='simple_'/>
+<field declared_type='int' type='i' name='level_'/>
+<field declared_type='int' type='i' name='sharpness_'/>
+<field declared_type='int' type='i' name='use_lf_delta_'/>
+<field declared_type='int*' type='[4i]' name='ref_lf_delta_'/>
+<field declared_type='int*' type='[4i]' name='mode_lf_delta_'/>
+</struct>
+<struct type='{_VP8FrameHeader=&quot;key_frame_&quot;C&quot;profile_&quot;C&quot;show_&quot;C&quot;partition_length_&quot;I}' name='VP8FrameHeader'>
+<field declared_type='uint8_t' type='C' name='key_frame_'/>
+<field declared_type='uint8_t' type='C' name='profile_'/>
+<field declared_type='uint8_t' type='C' name='show_'/>
+<field declared_type='uint32_t' type='I' name='partition_length_'/>
+</struct>
+<struct type='{VP8Io=&quot;width&quot;i&quot;height&quot;i&quot;mb_y&quot;i&quot;mb_w&quot;i&quot;mb_h&quot;i&quot;y&quot;*&quot;u&quot;*&quot;v&quot;*&quot;y_stride&quot;i&quot;uv_stride&quot;i&quot;opaque&quot;^v&quot;put&quot;^?&quot;setup&quot;^?&quot;teardown&quot;^?&quot;fancy_upsampling&quot;i&quot;data_size&quot;I&quot;data&quot;*&quot;bypass_filtering&quot;i&quot;use_cropping&quot;i&quot;crop_left&quot;i&quot;crop_right&quot;i&quot;crop_top&quot;i&quot;crop_bottom&quot;i&quot;use_scaling&quot;i&quot;scaled_width&quot;i&quot;scaled_height&quot;i&quot;a&quot;*}' name='VP8Io'>
+<field declared_type='int' type='i' name='width'/>
+<field declared_type='int' type='i' name='height'/>
+<field declared_type='int' type='i' name='mb_y'/>
+<field declared_type='int' type='i' name='mb_w'/>
+<field declared_type='int' type='i' name='mb_h'/>
+<field declared_type='uint8_t*' type='*' name='y' const='true'/>
+<field declared_type='uint8_t*' type='*' name='u' const='true'/>
+<field declared_type='uint8_t*' type='*' name='v' const='true'/>
+<field declared_type='int' type='i' name='y_stride'/>
+<field declared_type='int' type='i' name='uv_stride'/>
+<field declared_type='void*' type='^v' name='opaque'/>
+<field declared_type='VP8IoPutHook' type='^?' name='put' function_pointer='true'>
+<arg declared_type='VP8Io*' type='^{VP8Io=iiiii***ii^v^?^?^?iI*iiiiiiiii*}' const='true'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field declared_type='VP8IoSetupHook' type='^?' name='setup' function_pointer='true'>
+<arg declared_type='VP8Io*' type='^{VP8Io=iiiii***ii^v^?^?^?iI*iiiiiiiii*}'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field declared_type='VP8IoTeardownHook' type='^?' name='teardown' function_pointer='true'>
+<arg declared_type='VP8Io*' type='^{VP8Io=iiiii***ii^v^?^?^?iI*iiiiiiiii*}' const='true'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field declared_type='int' type='i' name='fancy_upsampling'/>
+<field declared_type='size_t' type='L' name='data_size'/>
+<field declared_type='uint8_t*' type='*' name='data' const='true'/>
+<field declared_type='int' type='i' name='bypass_filtering'/>
+<field declared_type='int' type='i' name='use_cropping'/>
+<field declared_type='int' type='i' name='crop_left'/>
+<field declared_type='int' type='i' name='crop_right'/>
+<field declared_type='int' type='i' name='crop_top'/>
+<field declared_type='int' type='i' name='crop_bottom'/>
+<field declared_type='int' type='i' name='use_scaling'/>
+<field declared_type='int' type='i' name='scaled_width'/>
+<field declared_type='int' type='i' name='scaled_height'/>
+<field declared_type='uint8_t*' type='*' name='a' const='true'/>
+</struct>
+<struct type='{_VP8LBitReader=&quot;val_&quot;Q&quot;buf_&quot;*&quot;len_&quot;I&quot;pos_&quot;I&quot;bit_pos_&quot;i&quot;eos_&quot;i&quot;error_&quot;i}' name='VP8LBitReader'>
+<field declared_type='vp8l_val_t' type='Q' name='val_'/>
+<field declared_type='uint8_t*' type='*' name='buf_' const='true'/>
+<field declared_type='size_t' type='L' name='len_'/>
+<field declared_type='size_t' type='L' name='pos_'/>
+<field declared_type='int' type='i' name='bit_pos_'/>
+<field declared_type='int' type='i' name='eos_'/>
+<field declared_type='int' type='i' name='error_'/>
+</struct>
+<struct type='{_VP8LColorCache=&quot;colors_&quot;^I&quot;hash_shift_&quot;i}' name='VP8LColorCache'>
+<field declared_type='uint32_t*' type='^I' name='colors_'/>
+<field declared_type='int' type='i' name='hash_shift_'/>
+</struct>
+<struct type='{_WebPRescaler=&quot;x_expand&quot;i&quot;num_channels&quot;i&quot;fy_scale&quot;i&quot;fx_scale&quot;i&quot;fxy_scale&quot;q&quot;y_accum&quot;i&quot;y_add&quot;i&quot;y_sub&quot;i&quot;x_add&quot;i&quot;x_sub&quot;i&quot;src_width&quot;i&quot;src_height&quot;i&quot;dst_width&quot;i&quot;dst_height&quot;i&quot;dst&quot;*&quot;dst_stride&quot;i&quot;irow&quot;^i&quot;frow&quot;^i}' name='VP8LDecoder'>
+<field declared_type='VP8StatusCode' type='i' name='status_'/>
+<field declared_type='VP8LDecodeState' type='i' name='action_'/>
+<field declared_type='VP8LDecodeState' type='i' name='state_'/>
+<field declared_type='VP8Io*' type='^{VP8Io=&quot;width&quot;i&quot;height&quot;i&quot;mb_y&quot;i&quot;mb_w&quot;i&quot;mb_h&quot;i&quot;y&quot;*&quot;u&quot;*&quot;v&quot;*&quot;y_stride&quot;i&quot;uv_stride&quot;i&quot;opaque&quot;^v&quot;put&quot;^?&quot;setup&quot;^?&quot;teardown&quot;^?&quot;fancy_upsampling&quot;i&quot;data_size&quot;I&quot;data&quot;*&quot;bypass_filtering&quot;i&quot;use_cropping&quot;i&quot;crop_left&quot;i&quot;crop_right&quot;i&quot;crop_top&quot;i&quot;crop_bottom&quot;i&quot;use_scaling&quot;i&quot;scaled_width&quot;i&quot;scaled_height&quot;i&quot;a&quot;*}' name='io_'/>
+<field declared_type='WebPDecBuffer*' type='^{WebPDecBuffer=&quot;colorspace&quot;i&quot;width&quot;i&quot;height&quot;i&quot;is_external_memory&quot;i&quot;u&quot;(?=&quot;RGBA&quot;{WebPRGBABuffer=&quot;rgba&quot;*&quot;stride&quot;i&quot;size&quot;I}&quot;YUVA&quot;{WebPYUVABuffer=&quot;y&quot;*&quot;u&quot;*&quot;v&quot;*&quot;a&quot;*&quot;y_stride&quot;i&quot;u_stride&quot;i&quot;v_stride&quot;i&quot;a_stride&quot;i&quot;y_size&quot;I&quot;u_size&quot;I&quot;v_size&quot;I&quot;a_size&quot;I})&quot;pad&quot;[4I]&quot;private_memory&quot;*}' name='output_' const='true'/>
+<field declared_type='uint32_t*' type='^I' name='argb_'/>
+<field declared_type='uint32_t*' type='^I' name='argb_cache_'/>
+<field declared_type='VP8LBitReader' type='{_VP8LBitReader=&quot;val_&quot;Q&quot;buf_&quot;*&quot;len_&quot;I&quot;pos_&quot;I&quot;bit_pos_&quot;i&quot;eos_&quot;i&quot;error_&quot;i}' name='br_'/>
+<field declared_type='int' type='i' name='width_'/>
+<field declared_type='int' type='i' name='height_'/>
+<field declared_type='int' type='i' name='last_row_'/>
+<field declared_type='int' type='i' name='last_out_row_'/>
+<field declared_type='VP8LMetadata' type='{_VP8LMetadata=&quot;color_cache_size_&quot;i&quot;color_cache_&quot;{_VP8LColorCache=&quot;colors_&quot;^I&quot;hash_shift_&quot;i}&quot;huffman_mask_&quot;i&quot;huffman_subsample_bits_&quot;i&quot;huffman_xsize_&quot;i&quot;huffman_image_&quot;^I&quot;num_htree_groups_&quot;i&quot;htree_groups_&quot;^{HuffmanTree=&quot;root_&quot;^{_HuffmanTreeNode=&quot;symbol_&quot;i&quot;children_&quot;i}&quot;max_nodes_&quot;i&quot;num_nodes_&quot;i}}' name='hdr_'/>
+<field declared_type='int' type='i' name='next_transform_'/>
+<field declared_type='VP8LTransform*' type='[4{VP8LTransform=&quot;type_&quot;i&quot;bits_&quot;i&quot;xsize_&quot;i&quot;ysize_&quot;i&quot;data_&quot;^I}' name='transforms_'/>
+<field declared_type='uint32_t' type='I' name='transforms_seen_'/>
+<field declared_type='uint8_t*' type='*' name='rescaler_memory'/>
+<field declared_type='WebPRescaler*' type='^{_WebPRescaler=&quot;x_expand&quot;i&quot;num_channels&quot;i&quot;fy_scale&quot;i&quot;fx_scale&quot;i&quot;fxy_scale&quot;q&quot;y_accum&quot;i&quot;y_add&quot;i&quot;y_sub&quot;i&quot;x_add&quot;i&quot;x_sub&quot;i&quot;src_width&quot;i&quot;src_height&quot;i&quot;dst_width&quot;i&quot;dst_height&quot;i&quot;dst&quot;*&quot;dst_stride&quot;i&quot;irow&quot;^i&quot;frow&quot;^i}' name='rescaler'/>
+</struct>
+<struct type='{_VP8LMetadata=&quot;color_cache_size_&quot;i&quot;color_cache_&quot;{_VP8LColorCache=&quot;colors_&quot;^I&quot;hash_shift_&quot;i}&quot;huffman_mask_&quot;i&quot;huffman_subsample_bits_&quot;i&quot;huffman_xsize_&quot;i&quot;huffman_image_&quot;^I&quot;num_htree_groups_&quot;i&quot;htree_groups_&quot;^{HuffmanTree=&quot;root_&quot;^{_HuffmanTreeNode=&quot;symbol_&quot;i&quot;children_&quot;i}&quot;max_nodes_&quot;i&quot;num_nodes_&quot;i}}' name='VP8LMetadata'>
+<field declared_type='int' type='i' name='color_cache_size_'/>
+<field declared_type='VP8LColorCache' type='{_VP8LColorCache=&quot;colors_&quot;^I&quot;hash_shift_&quot;i}' name='color_cache_'/>
+<field declared_type='int' type='i' name='huffman_mask_'/>
+<field declared_type='int' type='i' name='huffman_subsample_bits_'/>
+<field declared_type='int' type='i' name='huffman_xsize_'/>
+<field declared_type='uint32_t*' type='^I' name='huffman_image_'/>
+<field declared_type='int' type='i' name='num_htree_groups_'/>
+<field declared_type='HTreeGroup*' type='^{HuffmanTree=&quot;root_&quot;^{_HuffmanTreeNode=&quot;symbol_&quot;i&quot;children_&quot;i}&quot;max_nodes_&quot;i&quot;num_nodes_&quot;i}' name='htree_groups_'/>
+</struct>
+<struct type='{VP8LTransform=&quot;type_&quot;i&quot;bits_&quot;i&quot;xsize_&quot;i&quot;ysize_&quot;i&quot;data_&quot;^I}' name='VP8LTransform'>
+<field declared_type='VP8LImageTransformType' type='i' name='type_'/>
+<field declared_type='int' type='i' name='bits_'/>
+<field declared_type='int' type='i' name='xsize_'/>
+<field declared_type='int' type='i' name='ysize_'/>
+<field declared_type='uint32_t*' type='^I' name='data_'/>
+</struct>
+<struct type='{_VP8MB=&quot;nz_&quot;b24&quot;dc_nz_&quot;b1&quot;skip_&quot;b1}' name='VP8MB'>
+<field declared_type='unsigned int' type='b24' name='nz_'/>
+<field declared_type='unsigned int' type='b1' name='dc_nz_'/>
+<field declared_type='unsigned int' type='b1' name='skip_'/>
+</struct>
+<struct type='{_VP8PictureHeader=&quot;width_&quot;S&quot;height_&quot;S&quot;xscale_&quot;C&quot;yscale_&quot;C&quot;colorspace_&quot;C&quot;clamp_type_&quot;C}' name='VP8PictureHeader'>
+<field declared_type='uint16_t' type='S' name='width_'/>
+<field declared_type='uint16_t' type='S' name='height_'/>
+<field declared_type='uint8_t' type='C' name='xscale_'/>
+<field declared_type='uint8_t' type='C' name='yscale_'/>
+<field declared_type='uint8_t' type='C' name='colorspace_'/>
+<field declared_type='uint8_t' type='C' name='clamp_type_'/>
+</struct>
+<struct type='{_VP8Proba=&quot;segments_&quot;[3C]&quot;coeffs_&quot;[4[8[3[11C]]]]}' name='VP8Proba'>
+<field declared_type='uint8_t*' type='[3C]' name='segments_'/>
+<field declared_type='uint8_t****' type='[4[8[3[11C]]]]' name='coeffs_'/>
+</struct>
+<struct type='{_VP8QuantMatrix=&quot;y1_mat_&quot;[2i]&quot;y2_mat_&quot;[2i]&quot;uv_mat_&quot;[2i]}' name='VP8QuantMatrix'>
+<field declared_type='quant_t' type='[2i]' name='y1_mat_'/>
+<field declared_type='quant_t' type='[2i]' name='y2_mat_'/>
+<field declared_type='quant_t' type='[2i]' name='uv_mat_'/>
+</struct>
+<struct type='{_VP8SegmentHeader=&quot;use_segment_&quot;i&quot;update_map_&quot;i&quot;absolute_delta_&quot;i&quot;quantizer_&quot;[4c]&quot;filter_strength_&quot;[4c]}' name='VP8SegmentHeader'>
+<field declared_type='int' type='i' name='use_segment_'/>
+<field declared_type='int' type='i' name='update_map_'/>
+<field declared_type='int' type='i' name='absolute_delta_'/>
+<field declared_type='int8_t*' type='[4c]' name='quantizer_'/>
+<field declared_type='int8_t*' type='[4c]' name='filter_strength_'/>
+</struct>
+<struct type='{_VP8ThreadContext=&quot;id_&quot;i&quot;mb_y_&quot;i&quot;filter_row_&quot;i&quot;f_info_&quot;^{_VP8FInfo=&quot;f_level_&quot;b6&quot;f_ilevel_&quot;b6&quot;f_inner_&quot;b1}&quot;io_&quot;{VP8Io=&quot;width&quot;i&quot;height&quot;i&quot;mb_y&quot;i&quot;mb_w&quot;i&quot;mb_h&quot;i&quot;y&quot;*&quot;u&quot;*&quot;v&quot;*&quot;y_stride&quot;i&quot;uv_stride&quot;i&quot;opaque&quot;^v&quot;put&quot;^?&quot;setup&quot;^?&quot;teardown&quot;^?&quot;fancy_upsampling&quot;i&quot;data_size&quot;I&quot;data&quot;*&quot;bypass_filtering&quot;i&quot;use_cropping&quot;i&quot;crop_left&quot;i&quot;crop_right&quot;i&quot;crop_top&quot;i&quot;crop_bottom&quot;i&quot;use_scaling&quot;i&quot;scaled_width&quot;i&quot;scaled_height&quot;i&quot;a&quot;*}}' name='VP8ThreadContext'>
+<field declared_type='int' type='i' name='id_'/>
+<field declared_type='int' type='i' name='mb_y_'/>
+<field declared_type='int' type='i' name='filter_row_'/>
+<field declared_type='VP8FInfo*' type='^{_VP8FInfo=&quot;f_level_&quot;b6&quot;f_ilevel_&quot;b6&quot;f_inner_&quot;b1}' name='f_info_'/>
+<field declared_type='VP8Io' type='{VP8Io=&quot;width&quot;i&quot;height&quot;i&quot;mb_y&quot;i&quot;mb_w&quot;i&quot;mb_h&quot;i&quot;y&quot;*&quot;u&quot;*&quot;v&quot;*&quot;y_stride&quot;i&quot;uv_stride&quot;i&quot;opaque&quot;^v&quot;put&quot;^?&quot;setup&quot;^?&quot;teardown&quot;^?&quot;fancy_upsampling&quot;i&quot;data_size&quot;I&quot;data&quot;*&quot;bypass_filtering&quot;i&quot;use_cropping&quot;i&quot;crop_left&quot;i&quot;crop_right&quot;i&quot;crop_top&quot;i&quot;crop_bottom&quot;i&quot;use_scaling&quot;i&quot;scaled_width&quot;i&quot;scaled_height&quot;i&quot;a&quot;*}' name='io_'/>
+</struct>
+<struct type='{WebPBitstreamFeatures=&quot;width&quot;i&quot;height&quot;i&quot;has_alpha&quot;i&quot;has_animation&quot;i&quot;bitstream_version&quot;i&quot;no_incremental_decoding&quot;i&quot;rotate&quot;i&quot;uv_sampling&quot;i&quot;pad&quot;[2I]}' name='WebPBitstreamFeatures'>
+<field declared_type='int' type='i' name='width'/>
+<field declared_type='int' type='i' name='height'/>
+<field declared_type='int' type='i' name='has_alpha'/>
+<field declared_type='int' type='i' name='has_animation'/>
+<field declared_type='int' type='i' name='bitstream_version'/>
+<field declared_type='int' type='i' name='no_incremental_decoding'/>
+<field declared_type='int' type='i' name='rotate'/>
+<field declared_type='int' type='i' name='uv_sampling'/>
+<field declared_type='uint32_t*' type='[2I]' name='pad'/>
+</struct>
+<struct type='{WebPData=&quot;bytes&quot;*&quot;size&quot;I}' name='WebPData'>
+<field declared_type='uint8_t*' type='*' name='bytes' const='true'/>
+<field declared_type='size_t' type='L' name='size'/>
+</struct>
+<struct type='{WebPDecBuffer=&quot;colorspace&quot;i&quot;width&quot;i&quot;height&quot;i&quot;is_external_memory&quot;i&quot;u&quot;(?=&quot;RGBA&quot;{WebPRGBABuffer=&quot;rgba&quot;*&quot;stride&quot;i&quot;size&quot;I}&quot;YUVA&quot;{WebPYUVABuffer=&quot;y&quot;*&quot;u&quot;*&quot;v&quot;*&quot;a&quot;*&quot;y_stride&quot;i&quot;u_stride&quot;i&quot;v_stride&quot;i&quot;a_stride&quot;i&quot;y_size&quot;I&quot;u_size&quot;I&quot;v_size&quot;I&quot;a_size&quot;I})&quot;pad&quot;[4I]&quot;private_memory&quot;*}' name='WebPDecBuffer'>
+<field declared_type='WEBP_CSP_MODE' type='i' name='colorspace'/>
+<field declared_type='int' type='i' name='width'/>
+<field declared_type='int' type='i' name='height'/>
+<field declared_type='int' type='i' name='is_external_memory'/>
+<field declared_type='union WebPDecBuffer::' type='(?=&quot;RGBA&quot;{WebPRGBABuffer=&quot;rgba&quot;*&quot;stride&quot;i&quot;size&quot;I}&quot;YUVA&quot;{WebPYUVABuffer=&quot;y&quot;*&quot;u&quot;*&quot;v&quot;*&quot;a&quot;*&quot;y_stride&quot;i&quot;u_stride&quot;i&quot;v_stride&quot;i&quot;a_stride&quot;i&quot;y_size&quot;I&quot;u_size&quot;I&quot;v_size&quot;I&quot;a_size&quot;I})' name='u'/>
+<field declared_type='uint32_t*' type='[4I]' name='pad'/>
+<field declared_type='uint8_t*' type='*' name='private_memory'/>
+</struct>
+<struct type='{WebPDecParams=&quot;output&quot;^{WebPDecBuffer=&quot;colorspace&quot;i&quot;width&quot;i&quot;height&quot;i&quot;is_external_memory&quot;i&quot;u&quot;(?=&quot;RGBA&quot;{WebPRGBABuffer=&quot;rgba&quot;*&quot;stride&quot;i&quot;size&quot;I}&quot;YUVA&quot;{WebPYUVABuffer=&quot;y&quot;*&quot;u&quot;*&quot;v&quot;*&quot;a&quot;*&quot;y_stride&quot;i&quot;u_stride&quot;i&quot;v_stride&quot;i&quot;a_stride&quot;i&quot;y_size&quot;I&quot;u_size&quot;I&quot;v_size&quot;I&quot;a_size&quot;I})&quot;pad&quot;[4I]&quot;private_memory&quot;*}&quot;tmp_y&quot;*&quot;tmp_u&quot;*&quot;tmp_v&quot;*&quot;last_y&quot;i&quot;options&quot;^{WebPDecoderOptions=&quot;bypass_filtering&quot;i&quot;no_fancy_upsampling&quot;i&quot;use_cropping&quot;i&quot;crop_left&quot;i&quot;crop_top&quot;i&quot;crop_width&quot;i&quot;crop_height&quot;i&quot;use_scaling&quot;i&quot;scaled_width&quot;i&quot;scaled_height&quot;i&quot;use_threads&quot;i&quot;force_rotation&quot;i&quot;no_enhancement&quot;i&quot;pad&quot;[6I]}&quot;scaler_y&quot;{_WebPRescaler=&quot;x_expand&quot;i&quot;num_channels&quot;i&quot;fy_scale&quot;i&quot;fx_scale&quot;i&quot;fxy_scale&quot;q&quot;y_accum&quot;i&quot;y_add&quot;i&quot;y_sub&quot;i&quot;x_add&quot;i&quot;x_sub&quot;i&quot;src_width&quot;i&quot;src_height&quot;i&quot;dst_width&quot;i&quot;dst_height&quot;i&quot;dst&quot;*&quot;dst_stride&quot;i&quot;irow&quot;^i&quot;frow&quot;^i}&quot;scaler_u&quot;{_WebPRescaler=&quot;x_expand&quot;i&quot;num_channels&quot;i&quot;fy_scale&quot;i&quot;fx_scale&quot;i&quot;fxy_scale&quot;q&quot;y_accum&quot;i&quot;y_add&quot;i&quot;y_sub&quot;i&quot;x_add&quot;i&quot;x_sub&quot;i&quot;src_width&quot;i&quot;src_height&quot;i&quot;dst_width&quot;i&quot;dst_height&quot;i&quot;dst&quot;*&quot;dst_stride&quot;i&quot;irow&quot;^i&quot;frow&quot;^i}&quot;scaler_v&quot;{_WebPRescaler=&quot;x_expand&quot;i&quot;num_channels&quot;i&quot;fy_scale&quot;i&quot;fx_scale&quot;i&quot;fxy_scale&quot;q&quot;y_accum&quot;i&quot;y_add&quot;i&quot;y_sub&quot;i&quot;x_add&quot;i&quot;x_sub&quot;i&quot;src_width&quot;i&quot;src_height&quot;i&quot;dst_width&quot;i&quot;dst_height&quot;i&quot;dst&quot;*&quot;dst_stride&quot;i&quot;irow&quot;^i&quot;frow&quot;^i}&quot;scaler_a&quot;{_WebPRescaler=&quot;x_expand&quot;i&quot;num_channels&quot;i&quot;fy_scale&quot;i&quot;fx_scale&quot;i&quot;fxy_scale&quot;q&quot;y_accum&quot;i&quot;y_add&quot;i&quot;y_sub&quot;i&quot;x_add&quot;i&quot;x_sub&quot;i&quot;src_width&quot;i&quot;src_height&quot;i&quot;dst_width&quot;i&quot;dst_height&quot;i&quot;dst&quot;*&quot;dst_stride&quot;i&quot;irow&quot;^i&quot;frow&quot;^i}&quot;memory&quot;^v&quot;emit&quot;^?&quot;emit_alpha&quot;^?&quot;emit_alpha_row&quot;^?}' name='WebPDecParams'>
+<field declared_type='WebPDecBuffer*' type='^{WebPDecBuffer=&quot;colorspace&quot;i&quot;width&quot;i&quot;height&quot;i&quot;is_external_memory&quot;i&quot;u&quot;(?=&quot;RGBA&quot;{WebPRGBABuffer=&quot;rgba&quot;*&quot;stride&quot;i&quot;size&quot;I}&quot;YUVA&quot;{WebPYUVABuffer=&quot;y&quot;*&quot;u&quot;*&quot;v&quot;*&quot;a&quot;*&quot;y_stride&quot;i&quot;u_stride&quot;i&quot;v_stride&quot;i&quot;a_stride&quot;i&quot;y_size&quot;I&quot;u_size&quot;I&quot;v_size&quot;I&quot;a_size&quot;I})&quot;pad&quot;[4I]&quot;private_memory&quot;*}' name='output'/>
+<field declared_type='uint8_t*' type='*' name='tmp_y'/>
+<field declared_type='uint8_t*' type='*' name='tmp_u'/>
+<field declared_type='uint8_t*' type='*' name='tmp_v'/>
+<field declared_type='int' type='i' name='last_y'/>
+<field declared_type='WebPDecoderOptions*' type='^{WebPDecoderOptions=&quot;bypass_filtering&quot;i&quot;no_fancy_upsampling&quot;i&quot;use_cropping&quot;i&quot;crop_left&quot;i&quot;crop_top&quot;i&quot;crop_width&quot;i&quot;crop_height&quot;i&quot;use_scaling&quot;i&quot;scaled_width&quot;i&quot;scaled_height&quot;i&quot;use_threads&quot;i&quot;force_rotation&quot;i&quot;no_enhancement&quot;i&quot;pad&quot;[6I]}' name='options' const='true'/>
+<field declared_type='WebPRescaler' type='{_WebPRescaler=&quot;x_expand&quot;i&quot;num_channels&quot;i&quot;fy_scale&quot;i&quot;fx_scale&quot;i&quot;fxy_scale&quot;q&quot;y_accum&quot;i&quot;y_add&quot;i&quot;y_sub&quot;i&quot;x_add&quot;i&quot;x_sub&quot;i&quot;src_width&quot;i&quot;src_height&quot;i&quot;dst_width&quot;i&quot;dst_height&quot;i&quot;dst&quot;*&quot;dst_stride&quot;i&quot;irow&quot;^i&quot;frow&quot;^i}' name='scaler_y'/>
+<field declared_type='WebPRescaler' type='{_WebPRescaler=&quot;x_expand&quot;i&quot;num_channels&quot;i&quot;fy_scale&quot;i&quot;fx_scale&quot;i&quot;fxy_scale&quot;q&quot;y_accum&quot;i&quot;y_add&quot;i&quot;y_sub&quot;i&quot;x_add&quot;i&quot;x_sub&quot;i&quot;src_width&quot;i&quot;src_height&quot;i&quot;dst_width&quot;i&quot;dst_height&quot;i&quot;dst&quot;*&quot;dst_stride&quot;i&quot;irow&quot;^i&quot;frow&quot;^i}' name='scaler_u'/>
+<field declared_type='WebPRescaler' type='{_WebPRescaler=&quot;x_expand&quot;i&quot;num_channels&quot;i&quot;fy_scale&quot;i&quot;fx_scale&quot;i&quot;fxy_scale&quot;q&quot;y_accum&quot;i&quot;y_add&quot;i&quot;y_sub&quot;i&quot;x_add&quot;i&quot;x_sub&quot;i&quot;src_width&quot;i&quot;src_height&quot;i&quot;dst_width&quot;i&quot;dst_height&quot;i&quot;dst&quot;*&quot;dst_stride&quot;i&quot;irow&quot;^i&quot;frow&quot;^i}' name='scaler_v'/>
+<field declared_type='WebPRescaler' type='{_WebPRescaler=&quot;x_expand&quot;i&quot;num_channels&quot;i&quot;fy_scale&quot;i&quot;fx_scale&quot;i&quot;fxy_scale&quot;q&quot;y_accum&quot;i&quot;y_add&quot;i&quot;y_sub&quot;i&quot;x_add&quot;i&quot;x_sub&quot;i&quot;src_width&quot;i&quot;src_height&quot;i&quot;dst_width&quot;i&quot;dst_height&quot;i&quot;dst&quot;*&quot;dst_stride&quot;i&quot;irow&quot;^i&quot;frow&quot;^i}' name='scaler_a'/>
+<field declared_type='void*' type='^v' name='memory'/>
+<field declared_type='OutputFunc' type='^?' name='emit' function_pointer='true'>
+<arg declared_type='VP8Io*' type='^{VP8Io=iiiii***ii^v^?^?^?iI*iiiiiiiii*}' const='true'/>
+<arg declared_type='WebPDecParams*' type='^{WebPDecParams=^{WebPDecBuffer=iiii(?={WebPRGBABuffer=*iI}{WebPYUVABuffer=****iiiiIIII})[4I]*}***i^{WebPDecoderOptions=iiiiiiiiiiiii[6I]}{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}^v^?^?^?}' const='true'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field declared_type='OutputFunc' type='^?' name='emit_alpha' function_pointer='true'>
+<arg declared_type='VP8Io*' type='^{VP8Io=iiiii***ii^v^?^?^?iI*iiiiiiiii*}' const='true'/>
+<arg declared_type='WebPDecParams*' type='^{WebPDecParams=^{WebPDecBuffer=iiii(?={WebPRGBABuffer=*iI}{WebPYUVABuffer=****iiiiIIII})[4I]*}***i^{WebPDecoderOptions=iiiiiiiiiiiii[6I]}{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}^v^?^?^?}' const='true'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field declared_type='OutputRowFunc' type='^?' name='emit_alpha_row' function_pointer='true'>
+<arg declared_type='WebPDecParams*' type='^{WebPDecParams=^{WebPDecBuffer=iiii(?={WebPRGBABuffer=*iI}{WebPYUVABuffer=****iiiiIIII})[4I]*}***i^{WebPDecoderOptions=iiiiiiiiiiiii[6I]}{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}^v^?^?^?}' const='true'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</field>
+</struct>
+<struct type='{WebPDecoderConfig=&quot;input&quot;{WebPBitstreamFeatures=&quot;width&quot;i&quot;height&quot;i&quot;has_alpha&quot;i&quot;has_animation&quot;i&quot;bitstream_version&quot;i&quot;no_incremental_decoding&quot;i&quot;rotate&quot;i&quot;uv_sampling&quot;i&quot;pad&quot;[2I]}&quot;output&quot;{WebPDecBuffer=&quot;colorspace&quot;i&quot;width&quot;i&quot;height&quot;i&quot;is_external_memory&quot;i&quot;u&quot;(?=&quot;RGBA&quot;{WebPRGBABuffer=&quot;rgba&quot;*&quot;stride&quot;i&quot;size&quot;I}&quot;YUVA&quot;{WebPYUVABuffer=&quot;y&quot;*&quot;u&quot;*&quot;v&quot;*&quot;a&quot;*&quot;y_stride&quot;i&quot;u_stride&quot;i&quot;v_stride&quot;i&quot;a_stride&quot;i&quot;y_size&quot;I&quot;u_size&quot;I&quot;v_size&quot;I&quot;a_size&quot;I})&quot;pad&quot;[4I]&quot;private_memory&quot;*}&quot;options&quot;{WebPDecoderOptions=&quot;bypass_filtering&quot;i&quot;no_fancy_upsampling&quot;i&quot;use_cropping&quot;i&quot;crop_left&quot;i&quot;crop_top&quot;i&quot;crop_width&quot;i&quot;crop_height&quot;i&quot;use_scaling&quot;i&quot;scaled_width&quot;i&quot;scaled_height&quot;i&quot;use_threads&quot;i&quot;force_rotation&quot;i&quot;no_enhancement&quot;i&quot;pad&quot;[6I]}}' name='WebPDecoderConfig'>
+<field declared_type='WebPBitstreamFeatures' type='{WebPBitstreamFeatures=&quot;width&quot;i&quot;height&quot;i&quot;has_alpha&quot;i&quot;has_animation&quot;i&quot;bitstream_version&quot;i&quot;no_incremental_decoding&quot;i&quot;rotate&quot;i&quot;uv_sampling&quot;i&quot;pad&quot;[2I]}' name='input'/>
+<field declared_type='WebPDecBuffer' type='{WebPDecBuffer=&quot;colorspace&quot;i&quot;width&quot;i&quot;height&quot;i&quot;is_external_memory&quot;i&quot;u&quot;(?=&quot;RGBA&quot;{WebPRGBABuffer=&quot;rgba&quot;*&quot;stride&quot;i&quot;size&quot;I}&quot;YUVA&quot;{WebPYUVABuffer=&quot;y&quot;*&quot;u&quot;*&quot;v&quot;*&quot;a&quot;*&quot;y_stride&quot;i&quot;u_stride&quot;i&quot;v_stride&quot;i&quot;a_stride&quot;i&quot;y_size&quot;I&quot;u_size&quot;I&quot;v_size&quot;I&quot;a_size&quot;I})&quot;pad&quot;[4I]&quot;private_memory&quot;*}' name='output'/>
+<field declared_type='WebPDecoderOptions' type='{WebPDecoderOptions=&quot;bypass_filtering&quot;i&quot;no_fancy_upsampling&quot;i&quot;use_cropping&quot;i&quot;crop_left&quot;i&quot;crop_top&quot;i&quot;crop_width&quot;i&quot;crop_height&quot;i&quot;use_scaling&quot;i&quot;scaled_width&quot;i&quot;scaled_height&quot;i&quot;use_threads&quot;i&quot;force_rotation&quot;i&quot;no_enhancement&quot;i&quot;pad&quot;[6I]}' name='options'/>
+</struct>
+<struct type='{WebPDecoderOptions=&quot;bypass_filtering&quot;i&quot;no_fancy_upsampling&quot;i&quot;use_cropping&quot;i&quot;crop_left&quot;i&quot;crop_top&quot;i&quot;crop_width&quot;i&quot;crop_height&quot;i&quot;use_scaling&quot;i&quot;scaled_width&quot;i&quot;scaled_height&quot;i&quot;use_threads&quot;i&quot;force_rotation&quot;i&quot;no_enhancement&quot;i&quot;pad&quot;[6I]}' name='WebPDecoderOptions'>
+<field declared_type='int' type='i' name='bypass_filtering'/>
+<field declared_type='int' type='i' name='no_fancy_upsampling'/>
+<field declared_type='int' type='i' name='use_cropping'/>
+<field declared_type='int' type='i' name='crop_left'/>
+<field declared_type='int' type='i' name='crop_top'/>
+<field declared_type='int' type='i' name='crop_width'/>
+<field declared_type='int' type='i' name='crop_height'/>
+<field declared_type='int' type='i' name='use_scaling'/>
+<field declared_type='int' type='i' name='scaled_width'/>
+<field declared_type='int' type='i' name='scaled_height'/>
+<field declared_type='int' type='i' name='use_threads'/>
+<field declared_type='int' type='i' name='force_rotation'/>
+<field declared_type='int' type='i' name='no_enhancement'/>
+<field declared_type='uint32_t*' type='[6I]' name='pad'/>
+</struct>
+<struct type='{_WebPHeaderStructure=&quot;data&quot;*&quot;data_size&quot;I&quot;offset&quot;I&quot;alpha_data&quot;*&quot;alpha_data_size&quot;I&quot;compressed_size&quot;I&quot;riff_size&quot;I&quot;is_lossless&quot;i}' name='WebPHeaderStructure'>
+<field declared_type='uint8_t*' type='*' name='data' const='true'/>
+<field declared_type='size_t' type='L' name='data_size'/>
+<field declared_type='size_t' type='L' name='offset'/>
+<field declared_type='uint8_t*' type='*' name='alpha_data' const='true'/>
+<field declared_type='size_t' type='L' name='alpha_data_size'/>
+<field declared_type='size_t' type='L' name='compressed_size'/>
+<field declared_type='size_t' type='L' name='riff_size'/>
+<field declared_type='int' type='i' name='is_lossless'/>
+</struct>
+<struct type='{WebPRGBABuffer=&quot;rgba&quot;*&quot;stride&quot;i&quot;size&quot;I}' name='WebPRGBABuffer'>
+<field declared_type='uint8_t*' type='*' name='rgba'/>
+<field declared_type='int' type='i' name='stride'/>
+<field declared_type='size_t' type='L' name='size'/>
+</struct>
+<struct type='{_WebPRescaler=&quot;x_expand&quot;i&quot;num_channels&quot;i&quot;fy_scale&quot;i&quot;fx_scale&quot;i&quot;fxy_scale&quot;q&quot;y_accum&quot;i&quot;y_add&quot;i&quot;y_sub&quot;i&quot;x_add&quot;i&quot;x_sub&quot;i&quot;src_width&quot;i&quot;src_height&quot;i&quot;dst_width&quot;i&quot;dst_height&quot;i&quot;dst&quot;*&quot;dst_stride&quot;i&quot;irow&quot;^i&quot;frow&quot;^i}' name='WebPRescaler'>
+<field declared_type='int' type='i' name='x_expand'/>
+<field declared_type='int' type='i' name='num_channels'/>
+<field declared_type='int' type='i' name='fy_scale'/>
+<field declared_type='int' type='i' name='fx_scale'/>
+<field declared_type='int64_t' type='q' name='fxy_scale'/>
+<field declared_type='int' type='i' name='y_accum'/>
+<field declared_type='int' type='i' name='y_add'/>
+<field declared_type='int' type='i' name='y_sub'/>
+<field declared_type='int' type='i' name='x_add'/>
+<field declared_type='int' type='i' name='x_sub'/>
+<field declared_type='int' type='i' name='src_width'/>
+<field declared_type='int' type='i' name='src_height'/>
+<field declared_type='int' type='i' name='dst_width'/>
+<field declared_type='int' type='i' name='dst_height'/>
+<field declared_type='uint8_t*' type='*' name='dst'/>
+<field declared_type='int' type='i' name='dst_stride'/>
+<field declared_type='int32_t*' type='^i' name='irow'/>
+<field declared_type='int32_t*' type='^i' name='frow'/>
+</struct>
+<struct type='{_WebPWorker=&quot;status_&quot;i&quot;hook&quot;^?&quot;data1&quot;^v&quot;data2&quot;^v&quot;had_error&quot;i}' name='WebPWorker'>
+<field declared_type='WebPWorkerStatus' type='i' name='status_'/>
+<field declared_type='WebPWorkerHook' type='^?' name='hook' function_pointer='true'>
+<arg declared_type='void*' type='^v'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field declared_type='void*' type='^v' name='data1'/>
+<field declared_type='void*' type='^v' name='data2'/>
+<field declared_type='int' type='i' name='had_error'/>
+</struct>
+<struct type='{WebPYUVABuffer=&quot;y&quot;*&quot;u&quot;*&quot;v&quot;*&quot;a&quot;*&quot;y_stride&quot;i&quot;u_stride&quot;i&quot;v_stride&quot;i&quot;a_stride&quot;i&quot;y_size&quot;I&quot;u_size&quot;I&quot;v_size&quot;I&quot;a_size&quot;I}' name='WebPYUVABuffer'>
+<field declared_type='uint8_t*' type='*' name='y'/>
+<field declared_type='uint8_t*' type='*' name='u'/>
+<field declared_type='uint8_t*' type='*' name='v'/>
+<field declared_type='uint8_t*' type='*' name='a'/>
+<field declared_type='int' type='i' name='y_stride'/>
+<field declared_type='int' type='i' name='u_stride'/>
+<field declared_type='int' type='i' name='v_stride'/>
+<field declared_type='int' type='i' name='a_stride'/>
+<field declared_type='size_t' type='L' name='y_size'/>
+<field declared_type='size_t' type='L' name='u_size'/>
+<field declared_type='size_t' type='L' name='v_size'/>
+<field declared_type='size_t' type='L' name='a_size'/>
+</struct>
+<opaque type='^{WebPIDecoder=}' name='WebPIDecoder'/>
+<constant declared_type='NSString*' type='@' name='PKRevealControllerAllowsOverdrawKey' const='true'/>
+<constant declared_type='NSString*' type='@' name='PKRevealControllerAnimationCurveKey' const='true'/>
+<constant declared_type='NSString*' type='@' name='PKRevealControllerAnimationDurationKey' const='true'/>
+<constant declared_type='NSString*' type='@' name='PKRevealControllerAnimationTypeKey' const='true'/>
+<constant declared_type='NSString*' type='@' name='PKRevealControllerDisablesFrontViewInteractionKey' const='true'/>
+<constant declared_type='NSString*' type='@' name='PKRevealControllerQuickSwipeToggleVelocityKey' const='true'/>
+<constant declared_type='NSString*' type='@' name='PKRevealControllerRecognizesPanningOnFrontViewKey' const='true'/>
+<constant declared_type='NSString*' type='@' name='PKRevealControllerRecognizesResetTapOnFrontViewKey' const='true'/>
+<constant declared_type='NSString*' type='@' name='SDWebImageDownloadStartNotification' const='true'/>
+<constant declared_type='NSString*' type='@' name='SDWebImageDownloadStopNotification' const='true'/>
+<constant declared_type='int*' type='[24i]' name='VP8DspScan' const='true'/>
+<constant declared_type='VP8PredFunc*' type='^^?' name='VP8PredChroma8' const='true'/>
+<constant declared_type='VP8PredFunc*' type='^^?' name='VP8PredLuma16' const='true'/>
+<constant declared_type='VP8PredFunc*' type='^^?' name='VP8PredLuma4' const='true'/>
+<constant declared_type='uint8_t*' type='[709C]' name='VP8kClip'/>
+<constant declared_type='uint8_t*' type='[709C]' name='VP8kClip4Bits'/>
+<constant declared_type='int16_t*' type='[256s]' name='VP8kUToB'/>
+<constant declared_type='int32_t*' type='[256i]' name='VP8kUToG'/>
+<constant declared_type='int32_t*' type='[256i]' name='VP8kVToG'/>
+<constant declared_type='int16_t*' type='[256s]' name='VP8kVToR'/>
+<constant declared_type='WebPFilterFunc*' type='[4^?]' name='WebPFilters' const='true'/>
+<constant declared_type='WebPSampleLinePairFunc*' type='^^?' name='WebPSamplers' const='true'/>
+<constant declared_type='WebPUnfilterFunc*' type='[4^?]' name='WebPUnfilters' const='true'/>
+<constant declared_type='WebPUpsampleLinePairFunc*' type='^^?' name='WebPUpsamplers'/>
+<constant declared_type='WebPYUV444Converter*' type='^^?' name='WebPYUV444Converters' const='true'/>
+<constant declared_type='uint32_t' type='I' name='kHashMul' const='true'/>
+<constant declared_type='float*' type='[256f]' name='kLog2Table' const='true'/>
+<constant declared_type='float*' type='[256f]' name='kSLog2Table' const='true'/>
+<constant declared_type='uint8_t*' type='[128C]' name='kVP8Log2Range' const='true'/>
+<constant declared_type='range_t*' type='[128I]' name='kVP8NewRange' const='true'/>
+<enum value='16' name='ALPHA_FLAG'/>
+<enum value='1' name='ALPHA_HEADER_LEN'/>
+<enum value='1' name='ALPHA_LOSSLESS_COMPRESSION'/>
+<enum value='0' name='ALPHA_NO_COMPRESSION'/>
+<enum value='1' name='ALPHA_PREPROCESSED_LEVELS'/>
+<enum value='2' name='ANIMATION_FLAG'/>
+<enum value='6' name='ANIM_CHUNK_SIZE'/>
+<enum value='16' name='ANMF_CHUNK_SIZE'/>
+<enum value='4278190080' name='ARGB_BLACK'/>
+<enum value='16' name='BITS'/>
+<enum value='32' name='BPS'/>
+<enum value='0' name='B_DC_PRED'/>
+<enum value='5' name='B_DC_PRED_NOLEFT'/>
+<enum value='4' name='B_DC_PRED_NOTOP'/>
+<enum value='6' name='B_DC_PRED_NOTOPLEFT'/>
+<enum value='8' name='B_HD_PRED'/>
+<enum value='3' name='B_HE_PRED'/>
+<enum value='9' name='B_HU_PRED'/>
+<enum value='6' name='B_LD_PRED'/>
+<enum value='10' name='B_PRED'/>
+<enum value='4' name='B_RD_PRED'/>
+<enum value='1' name='B_TM_PRED'/>
+<enum value='2' name='B_VE_PRED'/>
+<enum value='7' name='B_VL_PRED'/>
+<enum value='5' name='B_VR_PRED'/>
+<enum value='8' name='CHUNK_HEADER_SIZE'/>
+<enum value='4' name='CHUNK_SIZE_BYTES'/>
+<enum value='19' name='CODE_LENGTH_CODES'/>
+<enum value='3' name='COLOR_INDEXING_TRANSFORM'/>
+<enum value='1' name='CROSS_COLOR_TRANSFORM'/>
+<enum value='0' name='DC_PRED'/>
+<enum value='0' name='DEC_MAJ_VERSION'/>
+<enum value='3' name='DEC_MIN_VERSION'/>
+<enum value='0' name='DEC_REV_VERSION'/>
+<enum value='8' name='DEFAULT_CODE_LENGTH'/>
+<enum value='8' name='EXIF_FLAG'/>
+<enum value='1' name='FRAGMENTS_FLAG'/>
+<enum value='6' name='FRGM_CHUNK_SIZE'/>
+<enum value='5' name='HUFFMAN_CODES_PER_META_CODE'/>
+<enum value='3' name='H_PRED'/>
+<enum value='32' name='ICCP_FLAG'/>
+<enum value='256' name='LOG_LOOKUP_IDX_MAX'/>
+<enum value='15' name='MAX_ALLOWED_CODE_LENGTH'/>
+<enum value='11' name='MAX_CACHE_BITS'/>
+<enum value='16777216' name='MAX_CANVAS_SIZE'/>
+<enum value='4294967286' name='MAX_CHUNK_PAYLOAD'/>
+<enum value='16777216' name='MAX_DURATION'/>
+<enum value='9' name='MAX_HUFFMAN_BITS'/>
+<enum value='4294967296' name='MAX_IMAGE_AREA'/>
+<enum value='65536' name='MAX_LOOP_COUNT'/>
+<enum value='8' name='MAX_NUM_PARTITIONS'/>
+<enum value='256' name='MAX_PALETTE_SIZE'/>
+<enum value='16777216' name='MAX_POSITION_OFFSET'/>
+<enum value='3' name='MB_FEATURE_TREE_PROBS'/>
+<enum value='2' name='MIN_HUFFMAN_BITS'/>
+<enum value='4' name='MODE_ARGB'/>
+<enum value='9' name='MODE_Argb'/>
+<enum value='2' name='MODE_BGR'/>
+<enum value='3' name='MODE_BGRA'/>
+<enum value='13' name='MODE_LAST'/>
+<enum value='0' name='MODE_RGB'/>
+<enum value='1' name='MODE_RGBA'/>
+<enum value='5' name='MODE_RGBA_4444'/>
+<enum value='6' name='MODE_RGB_565'/>
+<enum value='11' name='MODE_YUV'/>
+<enum value='12' name='MODE_YUVA'/>
+<enum value='8' name='MODE_bgrA'/>
+<enum value='7' name='MODE_rgbA'/>
+<enum value='10' name='MODE_rgbA_4444'/>
+<enum value='0' name='NOT_OK'/>
+<enum value='8' name='NUM_BANDS'/>
+<enum value='10' name='NUM_BMODES'/>
+<enum value='7' name='NUM_B_DC_MODES'/>
+<enum value='3' name='NUM_CTX'/>
+<enum value='40' name='NUM_DISTANCE_CODES'/>
+<enum value='24' name='NUM_LENGTH_CODES'/>
+<enum value='256' name='NUM_LITERAL_CODES'/>
+<enum value='4' name='NUM_MB_SEGMENTS'/>
+<enum value='4' name='NUM_MODE_LF_DELTAS'/>
+<enum value='19' name='NUM_MV_PROBAS'/>
+<enum value='11' name='NUM_PROBAS'/>
+<enum value='4' name='NUM_REF_LF_DELTAS'/>
+<enum value='4' name='NUM_TRANSFORMS'/>
+<enum value='4' name='NUM_TYPES'/>
+<enum value='1' name='OK'/>
+<enum value='0' name='PKRevealControllerAnimationTypeStatic'/>
+<enum value='2' name='PKRevealControllerFocusesFrontViewController'/>
+<enum value='0' name='PKRevealControllerFocusesLeftViewController'/>
+<enum value='3' name='PKRevealControllerFocusesLeftViewControllerInPresentationMode'/>
+<enum value='1' name='PKRevealControllerFocusesRightViewController'/>
+<enum value='4' name='PKRevealControllerFocusesRightViewControllerInPresentationMode'/>
+<enum value='3' name='PKRevealControllerTypeBoth'/>
+<enum value='1' name='PKRevealControllerTypeLeft'/>
+<enum value='0' name='PKRevealControllerTypeNone'/>
+<enum value='2' name='PKRevealControllerTypeRight'/>
+<enum value='0' name='PREDICTOR_TRANSFORM'/>
+<enum value='0' name='READ_DATA'/>
+<enum value='2' name='READ_DIM'/>
+<enum value='1' name='READ_HDR'/>
+<enum value='12' name='RIFF_HEADER_SIZE'/>
+<enum value='1' name='SDImageCacheTypeDisk'/>
+<enum value='2' name='SDImageCacheTypeMemory'/>
+<enum value='0' name='SDImageCacheTypeNone'/>
+<enum value='4' name='SDWebImageCacheMemoryOnly'/>
+<enum value='0' name='SDWebImageDownloaderFIFOExecutionOrder'/>
+<enum value='8' name='SDWebImageDownloaderIgnoreCachedResponse'/>
+<enum value='1' name='SDWebImageDownloaderLIFOExecutionOrder'/>
+<enum value='1' name='SDWebImageDownloaderLowPriority'/>
+<enum value='2' name='SDWebImageDownloaderProgressiveDownload'/>
+<enum value='4' name='SDWebImageDownloaderUseNSURLCache'/>
+<enum value='2' name='SDWebImageLowPriority'/>
+<enum value='8' name='SDWebImageProgressiveDownload'/>
+<enum value='16' name='SDWebImageRefreshCached'/>
+<enum value='1' name='SDWebImageRetryFailed'/>
+<enum value='2' name='SUBTRACT_GREEN'/>
+<enum value='4' name='TAG_SIZE'/>
+<enum value='1' name='TM_PRED'/>
+<enum value='1' name='TRANSFORM_PRESENT'/>
+<enum value='584' name='U_OFF'/>
+<enum value='5' name='VP8L_FRAME_HEADER_SIZE'/>
+<enum value='14' name='VP8L_IMAGE_SIZE_BITS'/>
+<enum value='47' name='VP8L_MAGIC_BYTE'/>
+<enum value='1' name='VP8L_SIGNATURE_SIZE'/>
+<enum value='0' name='VP8L_VERSION'/>
+<enum value='3' name='VP8L_VERSION_BITS'/>
+<enum value='10' name='VP8X_CHUNK_SIZE'/>
+<enum value='10' name='VP8_FRAME_HEADER_SIZE'/>
+<enum value='524288' name='VP8_MAX_PARTITION0_SIZE'/>
+<enum value='16777216' name='VP8_MAX_PARTITION_SIZE'/>
+<enum value='10289450' name='VP8_SIGNATURE'/>
+<enum value='3' name='VP8_STATUS_BITSTREAM_ERROR'/>
+<enum value='2' name='VP8_STATUS_INVALID_PARAM'/>
+<enum value='7' name='VP8_STATUS_NOT_ENOUGH_DATA'/>
+<enum value='0' name='VP8_STATUS_OK'/>
+<enum value='1' name='VP8_STATUS_OUT_OF_MEMORY'/>
+<enum value='5' name='VP8_STATUS_SUSPENDED'/>
+<enum value='4' name='VP8_STATUS_UNSUPPORTED_FEATURE'/>
+<enum value='6' name='VP8_STATUS_USER_ABORT'/>
+<enum value='600' name='V_OFF'/>
+<enum value='2' name='V_PRED'/>
+<enum value='513' name='WEBP_DECODER_ABI_VERSION'/>
+<enum value='5' name='WEBP_FILTER_BEST'/>
+<enum value='6' name='WEBP_FILTER_FAST'/>
+<enum value='3' name='WEBP_FILTER_GRADIENT'/>
+<enum value='1' name='WEBP_FILTER_HORIZONTAL'/>
+<enum value='4' name='WEBP_FILTER_LAST'/>
+<enum value='0' name='WEBP_FILTER_NONE'/>
+<enum value='2' name='WEBP_FILTER_VERTICAL'/>
+<enum value='1099511627776' name='WEBP_MAX_ALLOCABLE_MEMORY'/>
+<enum value='1' name='WEBP_MUX_DISPOSE_BACKGROUND'/>
+<enum value='0' name='WEBP_MUX_DISPOSE_NONE'/>
+<enum value='2' name='WORK'/>
+<enum value='4' name='XMP_FLAG'/>
+<enum value='16' name='YUV_FIX'/>
+<enum value='32768' name='YUV_HALF'/>
+<enum value='16777215' name='YUV_MASK'/>
+<enum value='482' name='YUV_RANGE_MAX'/>
+<enum value='-227' name='YUV_RANGE_MIN'/>
+<enum value='832' name='YUV_SIZE'/>
+<enum value='40' name='Y_OFF'/>
+<enum value='544' name='Y_SIZE'/>
+<enum value='2' name='kNEON'/>
+<enum value='0' name='kSSE2'/>
+<enum value='1' name='kSSE3'/>
+<function name='DequantizeLevels'>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<arg declared_type='int' type='i' name='width'/>
+<arg declared_type='int' type='i' name='height'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='EstimateBestFilter'>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<arg declared_type='int' type='i' name='width'/>
+<arg declared_type='int' type='i' name='height'/>
+<arg declared_type='int' type='i' name='stride'/>
+<retval declared_type='WEBP_FILTER_TYPE' type='i'/>
+</function>
+<function name='GetLE16' inline='true'>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='GetLE24' inline='true'>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='GetLE32' inline='true'>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<retval declared_type='uint32_t' type='I'/>
+</function>
+<function name='HuffmanCodeLengthsToCodes'>
+<arg declared_type='int*' type='^i' name='code_lengths' const='true'/>
+<arg declared_type='int' type='i' name='code_lengths_size'/>
+<arg declared_type='int*' type='^i' name='huff_codes' const='true'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='HuffmanTreeBuildExplicit'>
+<arg declared_type='HuffmanTree*' type='^{HuffmanTree=^{_HuffmanTreeNode=ii}ii}' name='tree' const='true'/>
+<arg declared_type='int*' type='^i' name='code_lengths' const='true'/>
+<arg declared_type='int*' type='^i' name='codes' const='true'/>
+<arg declared_type='int*' type='^i' name='symbols' const='true'/>
+<arg declared_type='int' type='i' name='max_symbol'/>
+<arg declared_type='int' type='i' name='num_symbols'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='HuffmanTreeBuildImplicit'>
+<arg declared_type='HuffmanTree*' type='^{HuffmanTree=^{_HuffmanTreeNode=ii}ii}' name='tree' const='true'/>
+<arg declared_type='int*' type='^i' name='code_lengths' const='true'/>
+<arg declared_type='int' type='i' name='code_lengths_size'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='HuffmanTreeNextNode' inline='true'>
+<arg declared_type='HuffmanTreeNode*' type='^{_HuffmanTreeNode=ii}' name='node' const='true'/>
+<arg declared_type='int' type='i' name='right_child'/>
+<retval declared_type='HuffmanTreeNode*' type='^{_HuffmanTreeNode=ii}' const='true'/>
+</function>
+<function name='HuffmanTreeNodeIsLeaf' inline='true'>
+<arg declared_type='HuffmanTreeNode*' type='^{_HuffmanTreeNode=ii}' name='node' const='true'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='HuffmanTreeRelease'>
+<arg declared_type='HuffmanTree*' type='^{HuffmanTree=^{_HuffmanTreeNode=ii}ii}' name='tree' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='PutLE16' inline='true'>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<arg declared_type='int' type='i' name='val'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='PutLE24' inline='true'>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<arg declared_type='int' type='i' name='val'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='PutLE32' inline='true'>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<arg declared_type='uint32_t' type='I' name='val'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='SDScaledImageForKey' inline='true'>
+<arg declared_type='NSString*' type='@' name='key'/>
+<arg declared_type='UIImage*' type='@' name='image'/>
+<retval declared_type='UIImage*' type='@'/>
+</function>
+<function name='VP8BitUpdate' inline='true'>
+<arg declared_type='VP8BitReader*' type='^{VP8BitReader=**iIIi}' name='br' const='true'/>
+<arg declared_type='range_t' type='I' name='split'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='VP8CheckSignature'>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<arg declared_type='size_t' type='L' name='data_size'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='VP8Clear'>
+<arg declared_type='VP8Decoder*' type='^{_VP8FInfo=b6b6b1}' name='dec' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8ClipUV' inline='true'>
+<arg declared_type='int' type='i' name='v'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='VP8Decode'>
+<arg declared_type='VP8Decoder*' type='^{_VP8FInfo=b6b6b1}' name='dec' const='true'/>
+<arg declared_type='VP8Io*' type='^{VP8Io=iiiii***ii^v^?^?^?iI*iiiiiiiii*}' name='io' const='true'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='VP8DecodeLayer'>
+<arg declared_type='VP8Decoder*' type='^{_VP8FInfo=b6b6b1}' name='dec' const='true'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='VP8DecodeMB'>
+<arg declared_type='VP8Decoder*' type='^{_VP8FInfo=b6b6b1}' name='dec' const='true'/>
+<arg declared_type='VP8BitReader*' type='^{VP8BitReader=**iIIi}' name='token_br' const='true'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='VP8DecompressAlphaRows'>
+<arg declared_type='VP8Decoder*' type='^{_VP8FInfo=b6b6b1}' name='dec' const='true'/>
+<arg declared_type='int' type='i' name='row'/>
+<arg declared_type='int' type='i' name='num_rows'/>
+<retval declared_type='uint8_t*' type='*' const='true'/>
+</function>
+<function name='VP8Delete'>
+<arg declared_type='VP8Decoder*' type='^{_VP8FInfo=b6b6b1}' name='dec' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8DspInit'>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8EncDspInit'>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8EnterCritical'>
+<arg declared_type='VP8Decoder*' type='^{_VP8FInfo=b6b6b1}' name='dec' const='true'/>
+<arg declared_type='VP8Io*' type='^{VP8Io=iiiii***ii^v^?^?^?iI*iiiiiiiii*}' name='io' const='true'/>
+<retval declared_type='VP8StatusCode' type='i'/>
+</function>
+<function name='VP8ExitCritical'>
+<arg declared_type='VP8Decoder*' type='^{_VP8FInfo=b6b6b1}' name='dec' const='true'/>
+<arg declared_type='VP8Io*' type='^{VP8Io=iiiii***ii^v^?^?^?iI*iiiiiiiii*}' name='io' const='true'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='VP8Get' inline='true'>
+<arg declared_type='VP8BitReader*' type='^{VP8BitReader=**iIIi}' name='br' const='true'/>
+<retval declared_type='uint32_t' type='I'/>
+</function>
+<function name='VP8GetBit' inline='true'>
+<arg declared_type='VP8BitReader*' type='^{VP8BitReader=**iIIi}' name='br' const='true'/>
+<arg declared_type='int' type='i' name='prob'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='VP8GetHeaders'>
+<arg declared_type='VP8Decoder*' type='^{_VP8FInfo=b6b6b1}' name='dec' const='true'/>
+<arg declared_type='VP8Io*' type='^{VP8Io=iiiii***ii^v^?^?^?iI*iiiiiiiii*}' name='io' const='true'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='VP8GetInfo'>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<arg declared_type='size_t' type='L' name='data_size'/>
+<arg declared_type='size_t' type='L' name='chunk_size'/>
+<arg declared_type='int*' type='^i' name='width' const='true'/>
+<arg declared_type='int*' type='^i' name='height' const='true'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='VP8GetSigned' inline='true'>
+<arg declared_type='VP8BitReader*' type='^{VP8BitReader=**iIIi}' name='br' const='true'/>
+<arg declared_type='int' type='i' name='v'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='VP8GetSignedValue'>
+<arg declared_type='VP8BitReader*' type='^{VP8BitReader=**iIIi}' name='br' const='true'/>
+<arg declared_type='int' type='i' name='num_bits'/>
+<retval declared_type='int32_t' type='i'/>
+</function>
+<function name='VP8GetValue'>
+<arg declared_type='VP8BitReader*' type='^{VP8BitReader=**iIIi}' name='br' const='true'/>
+<arg declared_type='int' type='i' name='num_bits'/>
+<retval declared_type='uint32_t' type='I'/>
+</function>
+<function name='VP8InitBitReader'>
+<arg declared_type='VP8BitReader*' type='^{VP8BitReader=**iIIi}' name='br' const='true'/>
+<arg declared_type='uint8_t*' type='*' name='start' const='true'/>
+<arg declared_type='uint8_t*' type='*' name='end' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8InitFrame'>
+<arg declared_type='VP8Decoder*' type='^{_VP8FInfo=b6b6b1}' name='dec' const='true'/>
+<arg declared_type='VP8Io*' type='^{VP8Io=iiiii***ii^v^?^?^?iI*iiiiiiiii*}' name='io'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='VP8InitIo' inline='true'>
+<arg declared_type='VP8Io*' type='^{VP8Io=iiiii***ii^v^?^?^?iI*iiiiiiiii*}' name='io' const='true'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='VP8InitIoInternal'>
+<arg declared_type='VP8Io*' type='^{VP8Io=iiiii***ii^v^?^?^?iI*iiiiiiiii*}' const='true'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='VP8InitScanline'>
+<arg declared_type='VP8Decoder*' type='^{_VP8FInfo=b6b6b1}' name='dec' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8LBitReaderSetBuffer'>
+<arg declared_type='VP8LBitReader*' type='^{_VP8LBitReader=Q*IIiii}' name='br' const='true'/>
+<arg declared_type='uint8_t*' type='*' name='buffer' const='true'/>
+<arg declared_type='size_t' type='L' name='length'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8LCheckSignature'>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<arg declared_type='size_t' type='L' name='size'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='VP8LClear'>
+<arg declared_type='VP8LDecoder*' type='^{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}' name='dec' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8LColorCacheClear'>
+<arg declared_type='VP8LColorCache*' type='^{_VP8LColorCache=^Ii}' name='color_cache' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8LColorCacheContains' inline='true'>
+<arg declared_type='VP8LColorCache*' type='^{_VP8LColorCache=^Ii}' name='cc' const='true'/>
+<arg declared_type='uint32_t' type='I' name='argb'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='VP8LColorCacheGetIndex' inline='true'>
+<arg declared_type='VP8LColorCache*' type='^{_VP8LColorCache=^Ii}' name='cc' const='true'/>
+<arg declared_type='uint32_t' type='I' name='argb'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='VP8LColorCacheInit'>
+<arg declared_type='VP8LColorCache*' type='^{_VP8LColorCache=^Ii}' name='color_cache' const='true'/>
+<arg declared_type='int' type='i' name='hash_bits'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='VP8LColorCacheInsert' inline='true'>
+<arg declared_type='VP8LColorCache*' type='^{_VP8LColorCache=^Ii}' name='cc' const='true'/>
+<arg declared_type='uint32_t' type='I' name='argb'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8LColorCacheLookup' inline='true'>
+<arg declared_type='VP8LColorCache*' type='^{_VP8LColorCache=^Ii}' name='cc' const='true'/>
+<arg declared_type='uint32_t' type='I' name='key'/>
+<retval declared_type='uint32_t' type='I'/>
+</function>
+<function name='VP8LColorSpaceTransform'>
+<arg declared_type='int' type='i' name='width'/>
+<arg declared_type='int' type='i' name='height'/>
+<arg declared_type='int' type='i' name='bits'/>
+<arg declared_type='int' type='i' name='step'/>
+<arg declared_type='uint32_t*' type='^I' name='argb' const='true'/>
+<arg declared_type='uint32_t*' type='^I' name='image'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8LConvertFromBGRA'>
+<arg declared_type='uint32_t*' type='^I' name='in_data' const='true'/>
+<arg declared_type='int' type='i' name='num_pixels'/>
+<arg declared_type='WEBP_CSP_MODE' type='i' name='out_colorspace'/>
+<arg declared_type='uint8_t*' type='*' name='rgba' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8LDecodeAlphaImageStream'>
+<arg declared_type='int' type='i' name='width'/>
+<arg declared_type='int' type='i' name='height'/>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<arg declared_type='size_t' type='L' name='data_size'/>
+<arg declared_type='uint8_t*' type='*' name='output' const='true'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='VP8LDecodeHeader'>
+<arg declared_type='VP8LDecoder*' type='^{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}' name='dec' const='true'/>
+<arg declared_type='VP8Io*' type='^{VP8Io=iiiii***ii^v^?^?^?iI*iiiiiiiii*}' name='io' const='true'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='VP8LDecodeImage'>
+<arg declared_type='VP8LDecoder*' type='^{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}' name='dec' const='true'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='VP8LDelete'>
+<arg declared_type='VP8LDecoder*' type='^{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}' name='dec' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8LDiscardBits' inline='true'>
+<arg declared_type='VP8LBitReader*' type='^{_VP8LBitReader=Q*IIiii}' name='br' const='true'/>
+<arg declared_type='int' type='i' name='num_bits'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8LFastLog2' inline='true'>
+<arg declared_type='int' type='i' name='v'/>
+<retval declared_type='float' type='f'/>
+</function>
+<function name='VP8LFastLog2Slow'>
+<arg declared_type='int' type='i' name='v'/>
+<retval declared_type='float' type='f'/>
+</function>
+<function name='VP8LFastSLog2' inline='true'>
+<arg declared_type='int' type='i' name='v'/>
+<retval declared_type='float' type='f'/>
+</function>
+<function name='VP8LFastSLog2Slow'>
+<arg declared_type='int' type='i' name='v'/>
+<retval declared_type='float' type='f'/>
+</function>
+<function name='VP8LFillBitWindow'>
+<arg declared_type='VP8LBitReader*' type='^{_VP8LBitReader=Q*IIiii}' name='br' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8LGetInfo'>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<arg declared_type='size_t' type='L' name='data_size'/>
+<arg declared_type='int*' type='^i' name='width' const='true'/>
+<arg declared_type='int*' type='^i' name='height' const='true'/>
+<arg declared_type='int*' type='^i' name='has_alpha' const='true'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='VP8LInitBitReader'>
+<arg declared_type='VP8LBitReader*' type='^{_VP8LBitReader=Q*IIiii}' name='br' const='true'/>
+<arg declared_type='uint8_t*' type='*' name='start' const='true'/>
+<arg declared_type='size_t' type='L' name='length'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8LInverseTransform'>
+<arg declared_type='struct VP8LTransform*' type='^{VP8LTransform=iiii^I}' name='transform' const='true'/>
+<arg declared_type='int' type='i' name='row_start'/>
+<arg declared_type='int' type='i' name='row_end'/>
+<arg declared_type='uint32_t*' type='^I' name='in' const='true'/>
+<arg declared_type='uint32_t*' type='^I' name='out' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8LNew'>
+<retval declared_type='VP8LDecoder*' type='^{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}'/>
+</function>
+<function name='VP8LPrefetchBits' inline='true'>
+<arg declared_type='VP8LBitReader*' type='^{_VP8LBitReader=Q*IIiii}' name='br' const='true'/>
+<retval declared_type='uint32_t' type='I'/>
+</function>
+<function name='VP8LReadBits'>
+<arg declared_type='VP8LBitReader*' type='^{_VP8LBitReader=Q*IIiii}' name='br' const='true'/>
+<arg declared_type='int' type='i' name='n_bits'/>
+<retval declared_type='uint32_t' type='I'/>
+</function>
+<function name='VP8LResidualImage'>
+<arg declared_type='int' type='i' name='width'/>
+<arg declared_type='int' type='i' name='height'/>
+<arg declared_type='int' type='i' name='bits'/>
+<arg declared_type='uint32_t*' type='^I' name='argb' const='true'/>
+<arg declared_type='uint32_t*' type='^I' name='argb_scratch' const='true'/>
+<arg declared_type='uint32_t*' type='^I' name='image' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8LSubPixels' inline='true'>
+<arg declared_type='uint32_t' type='I' name='a'/>
+<arg declared_type='uint32_t' type='I' name='b'/>
+<retval declared_type='uint32_t' type='I'/>
+</function>
+<function name='VP8LSubSampleSize' inline='true'>
+<arg declared_type='uint32_t' type='I' name='size'/>
+<arg declared_type='uint32_t' type='I' name='sampling_bits'/>
+<retval declared_type='uint32_t' type='I'/>
+</function>
+<function name='VP8LSubtractGreenFromBlueAndRed'>
+<arg declared_type='uint32_t*' type='^I' name='argb_data'/>
+<arg declared_type='int' type='i' name='num_pixs'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8LoadFinalBytes'>
+<arg declared_type='VP8BitReader*' type='^{VP8BitReader=**iIIi}' name='br' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8LoadNewBytes' inline='true'>
+<arg declared_type='VP8BitReader*' type='^{VP8BitReader=**iIIi}' name='br' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8New'>
+<retval declared_type='VP8Decoder*' type='^{_VP8FInfo=b6b6b1}'/>
+</function>
+<function name='VP8ParseIntraMode'>
+<arg declared_type='VP8BitReader*' type='^{VP8BitReader=**iIIi}' name='br' const='true'/>
+<arg declared_type='VP8Decoder*' type='^{_VP8FInfo=b6b6b1}' name='dec' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8ParseProba'>
+<arg declared_type='VP8BitReader*' type='^{VP8BitReader=**iIIi}' name='br' const='true'/>
+<arg declared_type='VP8Decoder*' type='^{_VP8FInfo=b6b6b1}' name='dec' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8ParseQuant'>
+<arg declared_type='VP8Decoder*' type='^{_VP8FInfo=b6b6b1}' name='dec' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8ProcessRow'>
+<arg declared_type='VP8Decoder*' type='^{_VP8FInfo=b6b6b1}' name='dec' const='true'/>
+<arg declared_type='VP8Io*' type='^{VP8Io=iiiii***ii^v^?^?^?iI*iiiiiiiii*}' name='io' const='true'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='VP8RGBToU' inline='true'>
+<arg declared_type='int' type='i' name='r'/>
+<arg declared_type='int' type='i' name='g'/>
+<arg declared_type='int' type='i' name='b'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='VP8RGBToV' inline='true'>
+<arg declared_type='int' type='i' name='r'/>
+<arg declared_type='int' type='i' name='g'/>
+<arg declared_type='int' type='i' name='b'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='VP8RGBToY' inline='true'>
+<arg declared_type='int' type='i' name='r'/>
+<arg declared_type='int' type='i' name='g'/>
+<arg declared_type='int' type='i' name='b'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='VP8ReconstructBlock'>
+<arg declared_type='VP8Decoder*' type='^{_VP8FInfo=b6b6b1}' name='dec' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8ResetProba'>
+<arg declared_type='VP8Proba*' type='^{_VP8Proba=[3C][4[8[3[11C]]]]}' name='proba' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8SetError'>
+<arg declared_type='VP8Decoder*' type='^{_VP8FInfo=b6b6b1}' name='dec' const='true'/>
+<arg declared_type='VP8StatusCode' type='i' name='error'/>
+<arg declared_type='char*' type='*' name='msg' const='true'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='VP8Shift' inline='true'>
+<arg declared_type='VP8BitReader*' type='^{VP8BitReader=**iIIi}' name='br' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8Status'>
+<arg declared_type='VP8Decoder*' type='^{_VP8FInfo=b6b6b1}' name='dec' const='true'/>
+<retval declared_type='VP8StatusCode' type='i'/>
+</function>
+<function name='VP8StatusMessage'>
+<arg declared_type='VP8Decoder*' type='^{_VP8FInfo=b6b6b1}' name='dec' const='true'/>
+<retval declared_type='char*' type='*' const='true'/>
+</function>
+<function name='VP8YUVInit'>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8YuvToArgb' inline='true'>
+<arg declared_type='uint8_t' type='C' name='y'/>
+<arg declared_type='uint8_t' type='C' name='u'/>
+<arg declared_type='uint8_t' type='C' name='v'/>
+<arg declared_type='uint8_t*' type='*' name='argb' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8YuvToBgr' inline='true'>
+<arg declared_type='uint8_t' type='C' name='y'/>
+<arg declared_type='uint8_t' type='C' name='u'/>
+<arg declared_type='uint8_t' type='C' name='v'/>
+<arg declared_type='uint8_t*' type='*' name='bgr' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8YuvToBgra' inline='true'>
+<arg declared_type='uint8_t' type='C' name='y'/>
+<arg declared_type='uint8_t' type='C' name='u'/>
+<arg declared_type='uint8_t' type='C' name='v'/>
+<arg declared_type='uint8_t*' type='*' name='bgra' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8YuvToRgb' inline='true'>
+<arg declared_type='uint8_t' type='C' name='y'/>
+<arg declared_type='uint8_t' type='C' name='u'/>
+<arg declared_type='uint8_t' type='C' name='v'/>
+<arg declared_type='uint8_t*' type='*' name='rgb' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8YuvToRgb565' inline='true'>
+<arg declared_type='uint8_t' type='C' name='y'/>
+<arg declared_type='uint8_t' type='C' name='u'/>
+<arg declared_type='uint8_t' type='C' name='v'/>
+<arg declared_type='uint8_t*' type='*' name='rgb' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8YuvToRgba' inline='true'>
+<arg declared_type='uint8_t' type='C' name='y'/>
+<arg declared_type='uint8_t' type='C' name='u'/>
+<arg declared_type='uint8_t' type='C' name='v'/>
+<arg declared_type='uint8_t*' type='*' name='rgba' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='VP8YuvToRgba4444' inline='true'>
+<arg declared_type='uint8_t' type='C' name='y'/>
+<arg declared_type='uint8_t' type='C' name='u'/>
+<arg declared_type='uint8_t' type='C' name='v'/>
+<arg declared_type='uint8_t*' type='*' name='argb' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='WebPAllocateDecBuffer'>
+<arg declared_type='int' type='i' name='width'/>
+<arg declared_type='int' type='i' name='height'/>
+<arg declared_type='WebPDecoderOptions*' type='^{WebPDecoderOptions=iiiiiiiiiiiii[6I]}' name='options' const='true'/>
+<arg declared_type='WebPDecBuffer*' type='^{WebPDecBuffer=iiii(?={WebPRGBABuffer=*iI}{WebPYUVABuffer=****iiiiIIII})[4I]*}' name='buffer' const='true'/>
+<retval declared_type='VP8StatusCode' type='i'/>
+</function>
+<function name='WebPCopyDecBuffer'>
+<arg declared_type='WebPDecBuffer*' type='^{WebPDecBuffer=iiii(?={WebPRGBABuffer=*iI}{WebPYUVABuffer=****iiiiIIII})[4I]*}' name='src' const='true'/>
+<arg declared_type='WebPDecBuffer*' type='^{WebPDecBuffer=iiii(?={WebPRGBABuffer=*iI}{WebPYUVABuffer=****iiiiIIII})[4I]*}' name='dst' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='WebPDataClear' inline='true'>
+<arg declared_type='WebPData*' type='^{WebPData=*I}' name='webp_data'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='WebPDataCopy' inline='true'>
+<arg declared_type='WebPData*' type='^{WebPData=*I}' name='src' const='true'/>
+<arg declared_type='WebPData*' type='^{WebPData=*I}' name='dst'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='WebPDataInit' inline='true'>
+<arg declared_type='WebPData*' type='^{WebPData=*I}' name='webp_data'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='WebPDecode'>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<arg declared_type='size_t' type='L' name='data_size'/>
+<arg declared_type='WebPDecoderConfig*' type='^{WebPDecoderConfig={WebPBitstreamFeatures=iiiiiiii[2I]}{WebPDecBuffer=iiii(?={WebPRGBABuffer=*iI}{WebPYUVABuffer=****iiiiIIII})[4I]*}{WebPDecoderOptions=iiiiiiiiiiiii[6I]}}' name='config'/>
+<retval declared_type='VP8StatusCode' type='i'/>
+</function>
+<function name='WebPDecodeARGB'>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<arg declared_type='size_t' type='L' name='data_size'/>
+<arg declared_type='int*' type='^i' name='width'/>
+<arg declared_type='int*' type='^i' name='height'/>
+<retval declared_type='uint8_t*' type='*'/>
+</function>
+<function name='WebPDecodeARGBInto'>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<arg declared_type='size_t' type='L' name='data_size'/>
+<arg declared_type='uint8_t*' type='*' name='output_buffer'/>
+<arg declared_type='size_t' type='L' name='output_buffer_size'/>
+<arg declared_type='int' type='i' name='output_stride'/>
+<retval declared_type='uint8_t*' type='*'/>
+</function>
+<function name='WebPDecodeBGR'>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<arg declared_type='size_t' type='L' name='data_size'/>
+<arg declared_type='int*' type='^i' name='width'/>
+<arg declared_type='int*' type='^i' name='height'/>
+<retval declared_type='uint8_t*' type='*'/>
+</function>
+<function name='WebPDecodeBGRA'>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<arg declared_type='size_t' type='L' name='data_size'/>
+<arg declared_type='int*' type='^i' name='width'/>
+<arg declared_type='int*' type='^i' name='height'/>
+<retval declared_type='uint8_t*' type='*'/>
+</function>
+<function name='WebPDecodeBGRAInto'>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<arg declared_type='size_t' type='L' name='data_size'/>
+<arg declared_type='uint8_t*' type='*' name='output_buffer'/>
+<arg declared_type='size_t' type='L' name='output_buffer_size'/>
+<arg declared_type='int' type='i' name='output_stride'/>
+<retval declared_type='uint8_t*' type='*'/>
+</function>
+<function name='WebPDecodeBGRInto'>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<arg declared_type='size_t' type='L' name='data_size'/>
+<arg declared_type='uint8_t*' type='*' name='output_buffer'/>
+<arg declared_type='size_t' type='L' name='output_buffer_size'/>
+<arg declared_type='int' type='i' name='output_stride'/>
+<retval declared_type='uint8_t*' type='*'/>
+</function>
+<function name='WebPDecodeRGB'>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<arg declared_type='size_t' type='L' name='data_size'/>
+<arg declared_type='int*' type='^i' name='width'/>
+<arg declared_type='int*' type='^i' name='height'/>
+<retval declared_type='uint8_t*' type='*'/>
+</function>
+<function name='WebPDecodeRGBA'>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<arg declared_type='size_t' type='L' name='data_size'/>
+<arg declared_type='int*' type='^i' name='width'/>
+<arg declared_type='int*' type='^i' name='height'/>
+<retval declared_type='uint8_t*' type='*'/>
+</function>
+<function name='WebPDecodeRGBAInto'>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<arg declared_type='size_t' type='L' name='data_size'/>
+<arg declared_type='uint8_t*' type='*' name='output_buffer'/>
+<arg declared_type='size_t' type='L' name='output_buffer_size'/>
+<arg declared_type='int' type='i' name='output_stride'/>
+<retval declared_type='uint8_t*' type='*'/>
+</function>
+<function name='WebPDecodeRGBInto'>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<arg declared_type='size_t' type='L' name='data_size'/>
+<arg declared_type='uint8_t*' type='*' name='output_buffer'/>
+<arg declared_type='size_t' type='L' name='output_buffer_size'/>
+<arg declared_type='int' type='i' name='output_stride'/>
+<retval declared_type='uint8_t*' type='*'/>
+</function>
+<function name='WebPDecodeYUV'>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<arg declared_type='size_t' type='L' name='data_size'/>
+<arg declared_type='int*' type='^i' name='width'/>
+<arg declared_type='int*' type='^i' name='height'/>
+<arg declared_type='uint8_t**' type='^*' name='u'/>
+<arg declared_type='uint8_t**' type='^*' name='v'/>
+<arg declared_type='int*' type='^i' name='stride'/>
+<arg declared_type='int*' type='^i' name='uv_stride'/>
+<retval declared_type='uint8_t*' type='*'/>
+</function>
+<function name='WebPDecodeYUVInto'>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<arg declared_type='size_t' type='L' name='data_size'/>
+<arg declared_type='uint8_t*' type='*' name='luma'/>
+<arg declared_type='size_t' type='L' name='luma_size'/>
+<arg declared_type='int' type='i' name='luma_stride'/>
+<arg declared_type='uint8_t*' type='*' name='u'/>
+<arg declared_type='size_t' type='L' name='u_size'/>
+<arg declared_type='int' type='i' name='u_stride'/>
+<arg declared_type='uint8_t*' type='*' name='v'/>
+<arg declared_type='size_t' type='L' name='v_size'/>
+<arg declared_type='int' type='i' name='v_stride'/>
+<retval declared_type='uint8_t*' type='*'/>
+</function>
+<function name='WebPFreeDecBuffer'>
+<arg declared_type='WebPDecBuffer*' type='^{WebPDecBuffer=iiii(?={WebPRGBABuffer=*iI}{WebPYUVABuffer=****iiiiIIII})[4I]*}' name='buffer'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='WebPGetDecoderVersion'>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='WebPGetFeatures' inline='true'>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<arg declared_type='size_t' type='L' name='data_size'/>
+<arg declared_type='WebPBitstreamFeatures*' type='^{WebPBitstreamFeatures=iiiiiiii[2I]}' name='features'/>
+<retval declared_type='VP8StatusCode' type='i'/>
+</function>
+<function name='WebPGetFeaturesInternal'>
+<arg declared_type='uint8_t*' type='*' const='true'/>
+<arg declared_type='size_t' type='L'/>
+<arg declared_type='WebPBitstreamFeatures*' type='^{WebPBitstreamFeatures=iiiiiiii[2I]}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='VP8StatusCode' type='i'/>
+</function>
+<function name='WebPGetInfo'>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<arg declared_type='size_t' type='L' name='data_size'/>
+<arg declared_type='int*' type='^i' name='width'/>
+<arg declared_type='int*' type='^i' name='height'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='WebPGetLinePairConverter'>
+<arg declared_type='int' type='i' name='alpha_is_last'/>
+<retval declared_type='WebPUpsampleLinePairFunc' type='^?' function_pointer='true'>
+<arg declared_type='uint8_t*' type='*' const='true'/>
+<arg declared_type='uint8_t*' type='*' const='true'/>
+<arg declared_type='uint8_t*' type='*' const='true'/>
+<arg declared_type='uint8_t*' type='*' const='true'/>
+<arg declared_type='uint8_t*' type='*' const='true'/>
+<arg declared_type='uint8_t*' type='*' const='true'/>
+<arg declared_type='uint8_t*' type='*'/>
+<arg declared_type='uint8_t*' type='*'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</function>
+<function name='WebPGrabDecBuffer'>
+<arg declared_type='WebPDecBuffer*' type='^{WebPDecBuffer=iiii(?={WebPRGBABuffer=*iI}{WebPYUVABuffer=****iiiiIIII})[4I]*}' name='src' const='true'/>
+<arg declared_type='WebPDecBuffer*' type='^{WebPDecBuffer=iiii(?={WebPRGBABuffer=*iI}{WebPYUVABuffer=****iiiiIIII})[4I]*}' name='dst' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='WebPIAppend'>
+<arg declared_type='WebPIDecoder*' type='^{WebPIDecoder=}' name='idec'/>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<arg declared_type='size_t' type='L' name='data_size'/>
+<retval declared_type='VP8StatusCode' type='i'/>
+</function>
+<function name='WebPIDecGetRGB'>
+<arg declared_type='WebPIDecoder*' type='^{WebPIDecoder=}' name='idec' const='true'/>
+<arg declared_type='int*' type='^i' name='last_y'/>
+<arg declared_type='int*' type='^i' name='width'/>
+<arg declared_type='int*' type='^i' name='height'/>
+<arg declared_type='int*' type='^i' name='stride'/>
+<retval declared_type='uint8_t*' type='*'/>
+</function>
+<function name='WebPIDecGetYUV' inline='true'>
+<arg declared_type='WebPIDecoder*' type='^{WebPIDecoder=}' name='idec' const='true'/>
+<arg declared_type='int*' type='^i' name='last_y'/>
+<arg declared_type='uint8_t**' type='^*' name='u'/>
+<arg declared_type='uint8_t**' type='^*' name='v'/>
+<arg declared_type='int*' type='^i' name='width'/>
+<arg declared_type='int*' type='^i' name='height'/>
+<arg declared_type='int*' type='^i' name='stride'/>
+<arg declared_type='int*' type='^i' name='uv_stride'/>
+<retval declared_type='uint8_t*' type='*'/>
+</function>
+<function name='WebPIDecGetYUVA'>
+<arg declared_type='WebPIDecoder*' type='^{WebPIDecoder=}' name='idec' const='true'/>
+<arg declared_type='int*' type='^i' name='last_y'/>
+<arg declared_type='uint8_t**' type='^*' name='u'/>
+<arg declared_type='uint8_t**' type='^*' name='v'/>
+<arg declared_type='uint8_t**' type='^*' name='a'/>
+<arg declared_type='int*' type='^i' name='width'/>
+<arg declared_type='int*' type='^i' name='height'/>
+<arg declared_type='int*' type='^i' name='stride'/>
+<arg declared_type='int*' type='^i' name='uv_stride'/>
+<arg declared_type='int*' type='^i' name='a_stride'/>
+<retval declared_type='uint8_t*' type='*'/>
+</function>
+<function name='WebPIDecode'>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<arg declared_type='size_t' type='L' name='data_size'/>
+<arg declared_type='WebPDecoderConfig*' type='^{WebPDecoderConfig={WebPBitstreamFeatures=iiiiiiii[2I]}{WebPDecBuffer=iiii(?={WebPRGBABuffer=*iI}{WebPYUVABuffer=****iiiiIIII})[4I]*}{WebPDecoderOptions=iiiiiiiiiiiii[6I]}}' name='config'/>
+<retval declared_type='WebPIDecoder*' type='^{WebPIDecoder=}'/>
+</function>
+<function name='WebPIDecodedArea'>
+<arg declared_type='WebPIDecoder*' type='^{WebPIDecoder=}' name='idec' const='true'/>
+<arg declared_type='int*' type='^i' name='left'/>
+<arg declared_type='int*' type='^i' name='top'/>
+<arg declared_type='int*' type='^i' name='width'/>
+<arg declared_type='int*' type='^i' name='height'/>
+<retval declared_type='WebPDecBuffer*' type='^{WebPDecBuffer=iiii(?={WebPRGBABuffer=*iI}{WebPYUVABuffer=****iiiiIIII})[4I]*}' const='true'/>
+</function>
+<function name='WebPIDelete'>
+<arg declared_type='WebPIDecoder*' type='^{WebPIDecoder=}' name='idec'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='WebPINewDecoder'>
+<arg declared_type='WebPDecBuffer*' type='^{WebPDecBuffer=iiii(?={WebPRGBABuffer=*iI}{WebPYUVABuffer=****iiiiIIII})[4I]*}' name='output_buffer'/>
+<retval declared_type='WebPIDecoder*' type='^{WebPIDecoder=}'/>
+</function>
+<function name='WebPINewRGB'>
+<arg declared_type='WEBP_CSP_MODE' type='i' name='csp'/>
+<arg declared_type='uint8_t*' type='*' name='output_buffer'/>
+<arg declared_type='size_t' type='L' name='output_buffer_size'/>
+<arg declared_type='int' type='i' name='output_stride'/>
+<retval declared_type='WebPIDecoder*' type='^{WebPIDecoder=}'/>
+</function>
+<function name='WebPINewYUV'>
+<arg declared_type='uint8_t*' type='*' name='luma'/>
+<arg declared_type='size_t' type='L' name='luma_size'/>
+<arg declared_type='int' type='i' name='luma_stride'/>
+<arg declared_type='uint8_t*' type='*' name='u'/>
+<arg declared_type='size_t' type='L' name='u_size'/>
+<arg declared_type='int' type='i' name='u_stride'/>
+<arg declared_type='uint8_t*' type='*' name='v'/>
+<arg declared_type='size_t' type='L' name='v_size'/>
+<arg declared_type='int' type='i' name='v_stride'/>
+<retval declared_type='WebPIDecoder*' type='^{WebPIDecoder=}'/>
+</function>
+<function name='WebPINewYUVA'>
+<arg declared_type='uint8_t*' type='*' name='luma'/>
+<arg declared_type='size_t' type='L' name='luma_size'/>
+<arg declared_type='int' type='i' name='luma_stride'/>
+<arg declared_type='uint8_t*' type='*' name='u'/>
+<arg declared_type='size_t' type='L' name='u_size'/>
+<arg declared_type='int' type='i' name='u_stride'/>
+<arg declared_type='uint8_t*' type='*' name='v'/>
+<arg declared_type='size_t' type='L' name='v_size'/>
+<arg declared_type='int' type='i' name='v_stride'/>
+<arg declared_type='uint8_t*' type='*' name='a'/>
+<arg declared_type='size_t' type='L' name='a_size'/>
+<arg declared_type='int' type='i' name='a_stride'/>
+<retval declared_type='WebPIDecoder*' type='^{WebPIDecoder=}'/>
+</function>
+<function name='WebPISetIOHooks'>
+<arg declared_type='WebPIDecoder*' type='^{WebPIDecoder=}' name='idec' const='true'/>
+<arg declared_type='VP8IoPutHook' type='^?' name='put' function_pointer='true'>
+<arg declared_type='VP8Io*' type='^{VP8Io=iiiii***ii^v^?^?^?iI*iiiiiiiii*}' const='true'/>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='VP8IoSetupHook' type='^?' name='setup' function_pointer='true'>
+<arg declared_type='VP8Io*' type='^{VP8Io=iiiii***ii^v^?^?^?iI*iiiiiiiii*}'/>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='VP8IoTeardownHook' type='^?' name='teardown' function_pointer='true'>
+<arg declared_type='VP8Io*' type='^{VP8Io=iiiii***ii^v^?^?^?iI*iiiiiiiii*}' const='true'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='void*' type='^v' name='user_data'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='WebPIUpdate'>
+<arg declared_type='WebPIDecoder*' type='^{WebPIDecoder=}' name='idec'/>
+<arg declared_type='uint8_t*' type='*' name='data' const='true'/>
+<arg declared_type='size_t' type='L' name='data_size'/>
+<retval declared_type='VP8StatusCode' type='i'/>
+</function>
+<function name='WebPInitCustomIo'>
+<arg declared_type='WebPDecParams*' type='^{WebPDecParams=^{WebPDecBuffer=iiii(?={WebPRGBABuffer=*iI}{WebPYUVABuffer=****iiiiIIII})[4I]*}***i^{WebPDecoderOptions=iiiiiiiiiiiii[6I]}{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}^v^?^?^?}' name='params' const='true'/>
+<arg declared_type='VP8Io*' type='^{VP8Io=iiiii***ii^v^?^?^?iI*iiiiiiiii*}' name='io' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='WebPInitDecBuffer' inline='true'>
+<arg declared_type='WebPDecBuffer*' type='^{WebPDecBuffer=iiii(?={WebPRGBABuffer=*iI}{WebPYUVABuffer=****iiiiIIII})[4I]*}' name='buffer'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='WebPInitDecBufferInternal'>
+<arg declared_type='WebPDecBuffer*' type='^{WebPDecBuffer=iiii(?={WebPRGBABuffer=*iI}{WebPYUVABuffer=****iiiiIIII})[4I]*}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='WebPInitDecoderConfig' inline='true'>
+<arg declared_type='WebPDecoderConfig*' type='^{WebPDecoderConfig={WebPBitstreamFeatures=iiiiiiii[2I]}{WebPDecBuffer=iiii(?={WebPRGBABuffer=*iI}{WebPYUVABuffer=****iiiiIIII})[4I]*}{WebPDecoderOptions=iiiiiiiiiiiii[6I]}}' name='config'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='WebPInitDecoderConfigInternal'>
+<arg declared_type='WebPDecoderConfig*' type='^{WebPDecoderConfig={WebPBitstreamFeatures=iiiiiiii[2I]}{WebPDecBuffer=iiii(?={WebPRGBABuffer=*iI}{WebPYUVABuffer=****iiiiIIII})[4I]*}{WebPDecoderOptions=iiiiiiiiiiiii[6I]}}'/>
+<arg declared_type='int' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='WebPInitPremultiply'>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='WebPInitPremultiplyNEON'>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='WebPInitPremultiplySSE2'>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='WebPInitUpsamplers'>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='WebPInitUpsamplersNEON'>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='WebPInitUpsamplersSSE2'>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='WebPIoInitFromOptions'>
+<arg declared_type='WebPDecoderOptions*' type='^{WebPDecoderOptions=iiiiiiiiiiiii[6I]}' name='options' const='true'/>
+<arg declared_type='VP8Io*' type='^{VP8Io=iiiii***ii^v^?^?^?iI*iiiiiiiii*}' name='io' const='true'/>
+<arg declared_type='WEBP_CSP_MODE' type='i' name='src_colorspace'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='WebPIsAlphaMode' inline='true'>
+<arg declared_type='WEBP_CSP_MODE' type='i' name='mode'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='WebPIsPremultipliedMode' inline='true'>
+<arg declared_type='WEBP_CSP_MODE' type='i' name='mode'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='WebPIsRGBMode' inline='true'>
+<arg declared_type='WEBP_CSP_MODE' type='i' name='mode'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='WebPParseHeaders'>
+<arg declared_type='WebPHeaderStructure*' type='^{_WebPHeaderStructure=*II*IIIi}' name='headers' const='true'/>
+<retval declared_type='VP8StatusCode' type='i'/>
+</function>
+<function name='WebPRescalerExport'>
+<arg declared_type='WebPRescaler*' type='^{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}' name='wrk' const='true'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='WebPRescalerExportRow'>
+<arg declared_type='WebPRescaler*' type='^{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}' name='wrk' const='true'/>
+<retval declared_type='uint8_t*' type='*'/>
+</function>
+<function name='WebPRescalerHasPendingOutput' inline='true'>
+<arg declared_type='WebPRescaler*' type='^{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}' name='rescaler' const='true'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='WebPRescalerImport'>
+<arg declared_type='WebPRescaler*' type='^{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}' name='rescaler' const='true'/>
+<arg declared_type='int' type='i' name='num_rows'/>
+<arg declared_type='uint8_t*' type='*' name='src' const='true'/>
+<arg declared_type='int' type='i' name='src_stride'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='WebPRescalerImportRow'>
+<arg declared_type='WebPRescaler*' type='^{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}' name='rescaler' const='true'/>
+<arg declared_type='uint8_t*' type='*' name='src' const='true'/>
+<arg declared_type='int' type='i' name='channel'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='WebPRescalerInit'>
+<arg declared_type='WebPRescaler*' type='^{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}' name='wrk' const='true'/>
+<arg declared_type='int' type='i' name='src_width'/>
+<arg declared_type='int' type='i' name='src_height'/>
+<arg declared_type='uint8_t*' type='*' name='dst' const='true'/>
+<arg declared_type='int' type='i' name='dst_width'/>
+<arg declared_type='int' type='i' name='dst_height'/>
+<arg declared_type='int' type='i' name='dst_stride'/>
+<arg declared_type='int' type='i' name='num_channels'/>
+<arg declared_type='int' type='i' name='x_add'/>
+<arg declared_type='int' type='i' name='x_sub'/>
+<arg declared_type='int' type='i' name='y_add'/>
+<arg declared_type='int' type='i' name='y_sub'/>
+<arg declared_type='int32_t*' type='^i' name='work' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='WebPResetDecParams'>
+<arg declared_type='WebPDecParams*' type='^{WebPDecParams=^{WebPDecBuffer=iiii(?={WebPRGBABuffer=*iI}{WebPYUVABuffer=****iiiiIIII})[4I]*}***i^{WebPDecoderOptions=iiiiiiiiiiiii[6I]}{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}{_WebPRescaler=iiiiqiiiiiiiii*i^i^i}^v^?^?^?}' name='params' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='WebPSafeCalloc'>
+<arg declared_type='uint64_t' type='Q' name='nmemb'/>
+<arg declared_type='size_t' type='L' name='size'/>
+<retval declared_type='void*' type='^v'/>
+</function>
+<function name='WebPSafeMalloc'>
+<arg declared_type='uint64_t' type='Q' name='nmemb'/>
+<arg declared_type='size_t' type='L' name='size'/>
+<retval declared_type='void*' type='^v'/>
+</function>
+<function name='WebPWorkerEnd'>
+<arg declared_type='WebPWorker*' type='^{_WebPWorker=i^?^v^vi}' name='worker' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='WebPWorkerInit'>
+<arg declared_type='WebPWorker*' type='^{_WebPWorker=i^?^v^vi}' name='worker' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='WebPWorkerLaunch'>
+<arg declared_type='WebPWorker*' type='^{_WebPWorker=i^?^v^vi}' name='worker' const='true'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='WebPWorkerReset'>
+<arg declared_type='WebPWorker*' type='^{_WebPWorker=i^?^v^vi}' name='worker' const='true'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='WebPWorkerSync'>
+<arg declared_type='WebPWorker*' type='^{_WebPWorker=i^?^v^vi}' name='worker' const='true'/>
+<retval declared_type='int' type='i'/>
+</function>
+<class name='MKAnnotationView'>
+<method selector='cancelCurrentImageLoad'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageWithURL:'>
+<arg declared_type='NSURL*' type='@' index='0' name='url'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageWithURL:completed:'>
+<arg declared_type='NSURL*' type='@' index='0' name='url'/>
+<arg declared_type='SDWebImageCompletedBlock' type='@?' index='1' name='completedBlock' function_pointer='true'>
+<arg declared_type='UIImage*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='SDImageCacheType' type='i'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageWithURL:placeholderImage:'>
+<arg declared_type='NSURL*' type='@' index='0' name='url'/>
+<arg declared_type='UIImage*' type='@' index='1' name='placeholder'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageWithURL:placeholderImage:completed:'>
+<arg declared_type='NSURL*' type='@' index='0' name='url'/>
+<arg declared_type='UIImage*' type='@' index='1' name='placeholder'/>
+<arg declared_type='SDWebImageCompletedBlock' type='@?' index='2' name='completedBlock' function_pointer='true'>
+<arg declared_type='UIImage*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='SDImageCacheType' type='i'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageWithURL:placeholderImage:options:'>
+<arg declared_type='NSURL*' type='@' index='0' name='url'/>
+<arg declared_type='UIImage*' type='@' index='1' name='placeholder'/>
+<arg declared_type='SDWebImageOptions' type='i' index='2' name='options'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageWithURL:placeholderImage:options:completed:'>
+<arg declared_type='NSURL*' type='@' index='0' name='url'/>
+<arg declared_type='UIImage*' type='@' index='1' name='placeholder'/>
+<arg declared_type='SDWebImageOptions' type='i' index='2' name='options'/>
+<arg declared_type='SDWebImageCompletedBlock' type='@?' index='3' name='completedBlock' function_pointer='true'>
+<arg declared_type='UIImage*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='SDImageCacheType' type='i'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NSData'>
+<method selector='sd_isGIF'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='cancel'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='imageManager:shouldDownloadImageForURL:'>
+<arg declared_type='SDWebImageManager*' type='@' index='0' name='imageManager'/>
+<arg declared_type='NSURL*' type='@' index='1' name='imageURL'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='imageManager:transformDownloadedImage:withURL:'>
+<arg declared_type='SDWebImageManager*' type='@' index='0' name='imageManager'/>
+<arg declared_type='UIImage*' type='@' index='1' name='image'/>
+<arg declared_type='NSURL*' type='@' index='2' name='imageURL'/>
+<retval declared_type='UIImage*' type='@'/>
+</method>
+</class>
+<class name='PKRevealController'>
+<method selector='enterPresentationModeAnimated:completion:'>
+<arg declared_type='BOOL' type='B' index='0' name='animated'/>
+<arg declared_type='PKDefaultCompletionHandler' type='@?' index='1' name='completion' function_pointer='true'>
+<arg declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='focusedController'>
+<retval declared_type='UIViewController*' type='@'/>
+</method>
+<method selector='frontViewController'>
+<retval declared_type='UIViewController*' type='@'/>
+</method>
+<method selector='hasLeftViewController'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='hasRightViewController'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='initWithFrontViewController:leftViewController:options:'>
+<arg declared_type='UIViewController*' type='@' index='0' name='frontViewController'/>
+<arg declared_type='UIViewController*' type='@' index='1' name='leftViewController'/>
+<arg declared_type='NSDictionary*' type='@' index='2' name='options'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithFrontViewController:leftViewController:rightViewController:options:'>
+<arg declared_type='UIViewController*' type='@' index='0' name='frontViewController'/>
+<arg declared_type='UIViewController*' type='@' index='1' name='leftViewController'/>
+<arg declared_type='UIViewController*' type='@' index='2' name='rightViewController'/>
+<arg declared_type='NSDictionary*' type='@' index='3' name='options'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithFrontViewController:rightViewController:options:'>
+<arg declared_type='UIViewController*' type='@' index='0' name='frontViewController'/>
+<arg declared_type='UIViewController*' type='@' index='1' name='rightViewController'/>
+<arg declared_type='NSDictionary*' type='@' index='2' name='options'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='isPresentationModeActive'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='leftViewController'>
+<retval declared_type='UIViewController*' type='@'/>
+</method>
+<method selector='options'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='resignPresentationModeEntirely:animated:completion:'>
+<arg declared_type='BOOL' type='B' index='0' name='entirely'/>
+<arg declared_type='BOOL' type='B' index='1' name='animated'/>
+<arg declared_type='PKDefaultCompletionHandler' type='@?' index='2' name='completion' function_pointer='true'>
+<arg declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='revealControllerWithFrontViewController:leftViewController:options:'>
+<arg declared_type='UIViewController*' type='@' index='0' name='frontViewController'/>
+<arg declared_type='UIViewController*' type='@' index='1' name='leftViewController'/>
+<arg declared_type='NSDictionary*' type='@' index='2' name='options'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='revealControllerWithFrontViewController:leftViewController:rightViewController:options:'>
+<arg declared_type='UIViewController*' type='@' index='0' name='frontViewController'/>
+<arg declared_type='UIViewController*' type='@' index='1' name='leftViewController'/>
+<arg declared_type='UIViewController*' type='@' index='2' name='rightViewController'/>
+<arg declared_type='NSDictionary*' type='@' index='3' name='options'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method class_method='true' selector='revealControllerWithFrontViewController:rightViewController:options:'>
+<arg declared_type='UIViewController*' type='@' index='0' name='frontViewController'/>
+<arg declared_type='UIViewController*' type='@' index='1' name='rightViewController'/>
+<arg declared_type='NSDictionary*' type='@' index='2' name='options'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='revealPanGestureRecognizer'>
+<retval declared_type='UIPanGestureRecognizer*' type='@'/>
+</method>
+<method selector='revealResetTapGestureRecognizer'>
+<retval declared_type='UITapGestureRecognizer*' type='@'/>
+</method>
+<method selector='rightViewController'>
+<retval declared_type='UIViewController*' type='@'/>
+</method>
+<method selector='setFrontViewController:'>
+<arg declared_type='UIViewController*' type='@' index='0' name='frontViewController'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFrontViewController:focusAfterChange:completion:'>
+<arg declared_type='UIViewController*' type='@' index='0' name='frontViewController'/>
+<arg declared_type='BOOL' type='B' index='1' name='focus'/>
+<arg declared_type='PKDefaultCompletionHandler' type='@?' index='2' name='completion' function_pointer='true'>
+<arg declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLeftViewController:'>
+<arg declared_type='UIViewController*' type='@' index='0' name='leftViewController'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMinimumWidth:maximumWidth:forViewController:'>
+<arg declared_type='CGFloat' type='f' index='0' name='minWidth'/>
+<arg declared_type='CGFloat' type='f' index='1' name='maxWidth'/>
+<arg declared_type='UIViewController*' type='@' index='2' name='controller'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOptions:'>
+<arg declared_type='NSDictionary*' type='@' index='0' name='options'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRevealPanGestureRecognizer:'>
+<arg declared_type='UIPanGestureRecognizer*' type='@' index='0' name='revealPanGestureRecognizer'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRevealResetTapGestureRecognizer:'>
+<arg declared_type='UITapGestureRecognizer*' type='@' index='0' name='revealResetTapGestureRecognizer'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRightViewController:'>
+<arg declared_type='UIViewController*' type='@' index='0' name='rightViewController'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='showViewController:'>
+<arg declared_type='UIViewController*' type='@' index='0' name='controller'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='showViewController:animated:completion:'>
+<arg declared_type='UIViewController*' type='@' index='0' name='controller'/>
+<arg declared_type='BOOL' type='B' index='1' name='animated'/>
+<arg declared_type='PKDefaultCompletionHandler' type='@?' index='2' name='completion' function_pointer='true'>
+<arg declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='state'>
+<retval declared_type='PKRevealControllerState' type='I'/>
+</method>
+<method selector='type'>
+<retval declared_type='PKRevealControllerType' type='I'/>
+</method>
+</class>
+<class name='PKRevealControllerContainerView'>
+<method selector='disableUserInteractionForContainedView'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='enableUserInteractionForContainedView'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='hasShadow'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='initForController:'>
+<arg declared_type='UIViewController*' type='@' index='0' name='controller'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initForController:shadow:'>
+<arg declared_type='UIViewController*' type='@' index='0' name='controller'/>
+<arg declared_type='BOOL' type='B' index='1' name='hasShadow'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='refreshShadowWithAnimationDuration:'>
+<arg declared_type='NSTimeInterval' type='d' index='0' name='duration'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setViewController:'>
+<arg declared_type='UIViewController*' type='@' index='0' name='viewController'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewController'>
+<retval declared_type='UIViewController*' type='@'/>
+</method>
+</class>
+<class name='SDImageCache'>
+<method selector='addReadOnlyCachePath:'>
+<arg declared_type='NSString*' type='@' index='0' name='path'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='cleanDisk'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='clearDisk'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='clearMemory'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='getDiskCount'>
+<retval declared_type='int' type='i'/>
+</method>
+<method selector='getSize'>
+<retval declared_type='unsigned long long' type='Q'/>
+</method>
+<method selector='imageFromDiskCacheForKey:'>
+<arg declared_type='NSString*' type='@' index='0' name='key'/>
+<retval declared_type='UIImage*' type='@'/>
+</method>
+<method selector='imageFromMemoryCacheForKey:'>
+<arg declared_type='NSString*' type='@' index='0' name='key'/>
+<retval declared_type='UIImage*' type='@'/>
+</method>
+<method selector='initWithNamespace:'>
+<arg declared_type='NSString*' type='@' index='0' name='ns'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='maxCacheAge'>
+<retval declared_type='NSInteger' type='i'/>
+</method>
+<method selector='maxCacheSize'>
+<retval declared_type='unsigned long long' type='Q'/>
+</method>
+<method selector='queryDiskCacheForKey:done:'>
+<arg declared_type='NSString*' type='@' index='0' name='key'/>
+<arg declared_type='void (^)(UIImage *, SDImageCacheType)' type='@?' index='1' name='doneBlock' function_pointer='true'>
+<arg declared_type='UIImage*' type='@'/>
+<arg declared_type='SDImageCacheType' type='i'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeImageForKey:'>
+<arg declared_type='NSString*' type='@' index='0' name='key'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeImageForKey:fromDisk:'>
+<arg declared_type='NSString*' type='@' index='0' name='key'/>
+<arg declared_type='BOOL' type='B' index='1' name='fromDisk'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMaxCacheAge:'>
+<arg declared_type='NSInteger' type='i' index='0' name='maxCacheAge'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMaxCacheSize:'>
+<arg declared_type='unsigned long long' type='Q' index='0' name='maxCacheSize'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='sharedImageCache'>
+<retval declared_type='SDImageCache*' type='@'/>
+</method>
+<method selector='storeImage:forKey:'>
+<arg declared_type='UIImage*' type='@' index='0' name='image'/>
+<arg declared_type='NSString*' type='@' index='1' name='key'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='storeImage:forKey:toDisk:'>
+<arg declared_type='UIImage*' type='@' index='0' name='image'/>
+<arg declared_type='NSString*' type='@' index='1' name='key'/>
+<arg declared_type='BOOL' type='B' index='2' name='toDisk'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='storeImage:imageData:forKey:toDisk:'>
+<arg declared_type='UIImage*' type='@' index='0' name='image'/>
+<arg declared_type='NSData*' type='@' index='1' name='data'/>
+<arg declared_type='NSString*' type='@' index='2' name='key'/>
+<arg declared_type='BOOL' type='B' index='3' name='toDisk'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='SDWebImageDownloader'>
+<method selector='downloadImageWithURL:options:progress:completed:'>
+<arg declared_type='NSURL*' type='@' index='0' name='url'/>
+<arg declared_type='SDWebImageDownloaderOptions' type='i' index='1' name='options'/>
+<arg declared_type='SDWebImageDownloaderProgressBlock' type='@?' index='2' name='progressBlock' function_pointer='true'>
+<arg declared_type='NSUInteger' type='I'/>
+<arg declared_type='long long' type='q'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='SDWebImageDownloaderCompletedBlock' type='@?' index='3' name='completedBlock' function_pointer='true'>
+<arg declared_type='UIImage*' type='@'/>
+<arg declared_type='NSData*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='executionOrder'>
+<retval declared_type='SDWebImageDownloaderExecutionOrder' type='i'/>
+</method>
+<method selector='maxConcurrentDownloads'>
+<retval declared_type='NSInteger' type='i'/>
+</method>
+<method selector='setExecutionOrder:'>
+<arg declared_type='SDWebImageDownloaderExecutionOrder' type='i' index='0' name='executionOrder'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMaxConcurrentDownloads:'>
+<arg declared_type='NSInteger' type='i' index='0' name='maxConcurrentDownloads'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setValue:forHTTPHeaderField:'>
+<arg declared_type='NSString*' type='@' index='0' name='value'/>
+<arg declared_type='NSString*' type='@' index='1' name='field'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='sharedDownloader'>
+<retval declared_type='SDWebImageDownloader*' type='@'/>
+</method>
+<method selector='valueForHTTPHeaderField:'>
+<arg declared_type='NSString*' type='@' index='0' name='field'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='SDWebImageDownloaderOperation'>
+<method selector='initWithRequest:options:progress:completed:cancelled:'>
+<arg declared_type='NSURLRequest*' type='@' index='0' name='request'/>
+<arg declared_type='SDWebImageDownloaderOptions' type='i' index='1' name='options'/>
+<arg declared_type='SDWebImageDownloaderProgressBlock' type='@?' index='2' name='progressBlock' function_pointer='true'>
+<arg declared_type='NSUInteger' type='I'/>
+<arg declared_type='long long' type='q'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='SDWebImageDownloaderCompletedBlock' type='@?' index='3' name='completedBlock' function_pointer='true'>
+<arg declared_type='UIImage*' type='@'/>
+<arg declared_type='NSData*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='void (^)()' type='@?' index='4' name='cancelBlock' function_pointer='true'>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='options'>
+<retval declared_type='SDWebImageDownloaderOptions' type='i'/>
+</method>
+<method selector='request'>
+<retval declared_type='NSURLRequest*' type='@'/>
+</method>
+<method selector='setRequest:'>
+<arg declared_type='NSURLRequest*' type='@' index='0' name='request'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='SDWebImageManager'>
+<method selector='cacheKeyFilter'>
+<retval declared_type='NSString *(^)(NSURL *)' type='@?' function_pointer='true'>
+<arg declared_type='NSURL*' type='@'/>
+<retval declared_type='NSString*' type='@'/>
+</retval>
+</method>
+<method selector='cancelAll'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='downloadWithURL:options:progress:completed:'>
+<arg declared_type='NSURL*' type='@' index='0' name='url'/>
+<arg declared_type='SDWebImageOptions' type='i' index='1' name='options'/>
+<arg declared_type='SDWebImageDownloaderProgressBlock' type='@?' index='2' name='progressBlock' function_pointer='true'>
+<arg declared_type='NSUInteger' type='I'/>
+<arg declared_type='long long' type='q'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='SDWebImageCompletedWithFinishedBlock' type='@?' index='3' name='completedBlock' function_pointer='true'>
+<arg declared_type='UIImage*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='SDImageCacheType' type='i'/>
+<arg declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='imageCache'>
+<retval declared_type='SDImageCache*' type='@'/>
+</method>
+<method selector='imageDownloader'>
+<retval declared_type='SDWebImageDownloader*' type='@'/>
+</method>
+<method selector='isRunning'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setCacheKeyFilter:'>
+<arg declared_type='NSString *(^)(NSURL *)' type='@?' index='0' name='cacheKeyFilter' function_pointer='true'>
+<arg declared_type='NSURL*' type='@'/>
+<retval declared_type='NSString*' type='@'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' type='@' index='0' name='delegate'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageCache:'>
+<arg declared_type='SDImageCache*' type='@' index='0' name='imageCache'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageDownloader:'>
+<arg declared_type='SDWebImageDownloader*' type='@' index='0' name='imageDownloader'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='sharedManager'>
+<retval declared_type='SDWebImageManager*' type='@'/>
+</method>
+</class>
+<class name='SDWebImagePrefetcher'>
+<method selector='cancelPrefetching'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='maxConcurrentDownloads'>
+<retval declared_type='NSUInteger' type='I'/>
+</method>
+<method selector='options'>
+<retval declared_type='SDWebImageOptions' type='i'/>
+</method>
+<method selector='prefetchURLs:'>
+<arg declared_type='NSArray*' type='@' index='0' name='urls'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='prefetchURLs:completed:'>
+<arg declared_type='NSArray*' type='@' index='0' name='urls'/>
+<arg declared_type='void (^)(NSUInteger, NSUInteger)' type='@?' index='1' name='completionBlock' function_pointer='true'>
+<arg declared_type='NSUInteger' type='I'/>
+<arg declared_type='NSUInteger' type='I'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMaxConcurrentDownloads:'>
+<arg declared_type='NSUInteger' type='I' index='0' name='maxConcurrentDownloads'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOptions:'>
+<arg declared_type='SDWebImageOptions' type='i' index='0' name='options'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='sharedImagePrefetcher'>
+<retval declared_type='SDWebImagePrefetcher*' type='@'/>
+</method>
+</class>
+<class name='UIButton'>
+<method selector='cancelCurrentImageLoad'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBackgroundImageWithURL:forState:'>
+<arg declared_type='NSURL*' type='@' index='0' name='url'/>
+<arg declared_type='UIControlState' type='I' index='1' name='state'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBackgroundImageWithURL:forState:completed:'>
+<arg declared_type='NSURL*' type='@' index='0' name='url'/>
+<arg declared_type='UIControlState' type='I' index='1' name='state'/>
+<arg declared_type='SDWebImageCompletedBlock' type='@?' index='2' name='completedBlock' function_pointer='true'>
+<arg declared_type='UIImage*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='SDImageCacheType' type='i'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBackgroundImageWithURL:forState:placeholderImage:'>
+<arg declared_type='NSURL*' type='@' index='0' name='url'/>
+<arg declared_type='UIControlState' type='I' index='1' name='state'/>
+<arg declared_type='UIImage*' type='@' index='2' name='placeholder'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBackgroundImageWithURL:forState:placeholderImage:completed:'>
+<arg declared_type='NSURL*' type='@' index='0' name='url'/>
+<arg declared_type='UIControlState' type='I' index='1' name='state'/>
+<arg declared_type='UIImage*' type='@' index='2' name='placeholder'/>
+<arg declared_type='SDWebImageCompletedBlock' type='@?' index='3' name='completedBlock' function_pointer='true'>
+<arg declared_type='UIImage*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='SDImageCacheType' type='i'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBackgroundImageWithURL:forState:placeholderImage:options:'>
+<arg declared_type='NSURL*' type='@' index='0' name='url'/>
+<arg declared_type='UIControlState' type='I' index='1' name='state'/>
+<arg declared_type='UIImage*' type='@' index='2' name='placeholder'/>
+<arg declared_type='SDWebImageOptions' type='i' index='3' name='options'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBackgroundImageWithURL:forState:placeholderImage:options:completed:'>
+<arg declared_type='NSURL*' type='@' index='0' name='url'/>
+<arg declared_type='UIControlState' type='I' index='1' name='state'/>
+<arg declared_type='UIImage*' type='@' index='2' name='placeholder'/>
+<arg declared_type='SDWebImageOptions' type='i' index='3' name='options'/>
+<arg declared_type='SDWebImageCompletedBlock' type='@?' index='4' name='completedBlock' function_pointer='true'>
+<arg declared_type='UIImage*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='SDImageCacheType' type='i'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageWithURL:forState:'>
+<arg declared_type='NSURL*' type='@' index='0' name='url'/>
+<arg declared_type='UIControlState' type='I' index='1' name='state'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageWithURL:forState:completed:'>
+<arg declared_type='NSURL*' type='@' index='0' name='url'/>
+<arg declared_type='UIControlState' type='I' index='1' name='state'/>
+<arg declared_type='SDWebImageCompletedBlock' type='@?' index='2' name='completedBlock' function_pointer='true'>
+<arg declared_type='UIImage*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='SDImageCacheType' type='i'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageWithURL:forState:placeholderImage:'>
+<arg declared_type='NSURL*' type='@' index='0' name='url'/>
+<arg declared_type='UIControlState' type='I' index='1' name='state'/>
+<arg declared_type='UIImage*' type='@' index='2' name='placeholder'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageWithURL:forState:placeholderImage:completed:'>
+<arg declared_type='NSURL*' type='@' index='0' name='url'/>
+<arg declared_type='UIControlState' type='I' index='1' name='state'/>
+<arg declared_type='UIImage*' type='@' index='2' name='placeholder'/>
+<arg declared_type='SDWebImageCompletedBlock' type='@?' index='3' name='completedBlock' function_pointer='true'>
+<arg declared_type='UIImage*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='SDImageCacheType' type='i'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageWithURL:forState:placeholderImage:options:'>
+<arg declared_type='NSURL*' type='@' index='0' name='url'/>
+<arg declared_type='UIControlState' type='I' index='1' name='state'/>
+<arg declared_type='UIImage*' type='@' index='2' name='placeholder'/>
+<arg declared_type='SDWebImageOptions' type='i' index='3' name='options'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageWithURL:forState:placeholderImage:options:completed:'>
+<arg declared_type='NSURL*' type='@' index='0' name='url'/>
+<arg declared_type='UIControlState' type='I' index='1' name='state'/>
+<arg declared_type='UIImage*' type='@' index='2' name='placeholder'/>
+<arg declared_type='SDWebImageOptions' type='i' index='3' name='options'/>
+<arg declared_type='SDWebImageCompletedBlock' type='@?' index='4' name='completedBlock' function_pointer='true'>
+<arg declared_type='UIImage*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='SDImageCacheType' type='i'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='UIImage'>
+<method class_method='true' selector='decodedImageWithImage:'>
+<arg declared_type='UIImage*' type='@' index='0' name='image'/>
+<retval declared_type='UIImage*' type='@'/>
+</method>
+<method class_method='true' selector='sd_animatedGIFNamed:'>
+<arg declared_type='NSString*' type='@' index='0' name='name'/>
+<retval declared_type='UIImage*' type='@'/>
+</method>
+<method class_method='true' selector='sd_animatedGIFWithData:'>
+<arg declared_type='NSData*' type='@' index='0' name='data'/>
+<retval declared_type='UIImage*' type='@'/>
+</method>
+<method selector='sd_animatedImageByScalingAndCroppingToSize:'>
+<arg declared_type='CGSize' type='{CGSize=ff}' index='0' name='size'/>
+<retval declared_type='UIImage*' type='@'/>
+</method>
+<method class_method='true' selector='sd_imageWithData:'>
+<arg declared_type='NSData*' type='@' index='0' name='data'/>
+<retval declared_type='UIImage*' type='@'/>
+</method>
+</class>
+<class name='UIImageView'>
+<method selector='cancelCurrentImageLoad'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageWithURL:'>
+<arg declared_type='NSURL*' type='@' index='0' name='url'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageWithURL:completed:'>
+<arg declared_type='NSURL*' type='@' index='0' name='url'/>
+<arg declared_type='SDWebImageCompletedBlock' type='@?' index='1' name='completedBlock' function_pointer='true'>
+<arg declared_type='UIImage*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='SDImageCacheType' type='i'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageWithURL:placeholderImage:'>
+<arg declared_type='NSURL*' type='@' index='0' name='url'/>
+<arg declared_type='UIImage*' type='@' index='1' name='placeholder'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageWithURL:placeholderImage:completed:'>
+<arg declared_type='NSURL*' type='@' index='0' name='url'/>
+<arg declared_type='UIImage*' type='@' index='1' name='placeholder'/>
+<arg declared_type='SDWebImageCompletedBlock' type='@?' index='2' name='completedBlock' function_pointer='true'>
+<arg declared_type='UIImage*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='SDImageCacheType' type='i'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageWithURL:placeholderImage:options:'>
+<arg declared_type='NSURL*' type='@' index='0' name='url'/>
+<arg declared_type='UIImage*' type='@' index='1' name='placeholder'/>
+<arg declared_type='SDWebImageOptions' type='i' index='2' name='options'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageWithURL:placeholderImage:options:completed:'>
+<arg declared_type='NSURL*' type='@' index='0' name='url'/>
+<arg declared_type='UIImage*' type='@' index='1' name='placeholder'/>
+<arg declared_type='SDWebImageOptions' type='i' index='2' name='options'/>
+<arg declared_type='SDWebImageCompletedBlock' type='@?' index='3' name='completedBlock' function_pointer='true'>
+<arg declared_type='UIImage*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='SDImageCacheType' type='i'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageWithURL:placeholderImage:options:progress:completed:'>
+<arg declared_type='NSURL*' type='@' index='0' name='url'/>
+<arg declared_type='UIImage*' type='@' index='1' name='placeholder'/>
+<arg declared_type='SDWebImageOptions' type='i' index='2' name='options'/>
+<arg declared_type='SDWebImageDownloaderProgressBlock' type='@?' index='3' name='progressBlock' function_pointer='true'>
+<arg declared_type='NSUInteger' type='I'/>
+<arg declared_type='long long' type='q'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='SDWebImageCompletedBlock' type='@?' index='4' name='completedBlock' function_pointer='true'>
+<arg declared_type='UIImage*' type='@'/>
+<arg declared_type='NSError*' type='@'/>
+<arg declared_type='SDImageCacheType' type='i'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='UIViewController'>
+<method selector='revealController'>
+<retval declared_type='PKRevealController*' type='@'/>
+</method>
+<method selector='setRevealController:'>
+<arg declared_type='PKRevealController*' type='@' index='0' name='revealController'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<informal_protocol name='SDWebImageManagerDelegate'>
+<method type='B16@0:4@8@12' selector='imageManager:shouldDownloadImageForURL:'>
+<arg declared_type='SDWebImageManager*' type='@' index='0' name='imageManager'/>
+<arg declared_type='NSURL*' type='@' index='1' name='imageURL'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method type='@20@0:4@8@12@16' selector='imageManager:transformDownloadedImage:withURL:'>
+<arg declared_type='SDWebImageManager*' type='@' index='0' name='imageManager'/>
+<arg declared_type='UIImage*' type='@' index='1' name='image'/>
+<arg declared_type='NSURL*' type='@' index='2' name='imageURL'/>
+<retval declared_type='UIImage*' type='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='SDWebImageOperation'>
+<method type='v8@0:4' selector='cancel'>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+</signatures>

@@ -1,0 +1,27 @@
+PODS:
+  - libwebp (0.3.0-rc7):
+    - libwebp/dec
+    - libwebp/dsp
+    - libwebp/utils
+    - libwebp/webp
+  - libwebp/dec (0.3.0-rc7)
+  - libwebp/dsp (0.3.0-rc7)
+  - libwebp/utils (0.3.0-rc7)
+  - libwebp/webp (0.3.0-rc7)
+  - PKRevealController (1.0b2)
+  - SDWebImage (3.3):
+    - libwebp
+    - SDWebImage/MapKit
+  - SDWebImage/MapKit (3.3):
+    - libwebp
+
+DEPENDENCIES:
+  - PKRevealController
+  - SDWebImage
+
+SPEC CHECKSUMS:
+  libwebp: 40517fa1fd3716eded73b4696c45fc0b66e4b414
+  PKRevealController: 631e6a3db833a0c660203c2dba0963109549ec8a
+  SDWebImage: 79a8bac9ccf85b269100b294f7b43684dab8bf8a
+
+COCOAPODS: 0.22.3
